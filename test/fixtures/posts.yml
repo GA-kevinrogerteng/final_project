@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fb_id: MyString
+  fb_type: MyString
+  link: MyString
+  story: MyString
+  message: MyString
+  created_time: 2014-03-22 17:21:21
+  updated_time: 2014-03-22 17:21:21
+  fb_uid: MyString
+  fb_uid_from: MyString
+  picture: MyString
+  icon: MyString
+  name: MyString
+  object_id: MyString
+  category: MyString
+
+two:
+  fb_id: MyString
+  fb_type: MyString
+  link: MyString
+  story: MyString
+  message: MyString
+  created_time: 2014-03-22 17:21:21
+  updated_time: 2014-03-22 17:21:21
+  fb_uid: MyString
+  fb_uid_from: MyString
+  picture: MyString
+  icon: MyString
+  name: MyString
+  object_id: MyString
+  category: MyString

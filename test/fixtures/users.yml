@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  friends: MyString
+  fb_id: MyString
+  gender: MyString
+  hometown: MyString
+  installed: false
+  language: MyString
+  last_name: MyString
+  first_name: MyString
+  middle_name: MyString
+  locale: MyString
+  name: MyString
+  name_format: MyString
+  political: MyString
+  relationship_status: MyString
+  religion: MyString
+
+two:
+  friends: MyString
+  fb_id: MyString
+  gender: MyString
+  hometown: MyString
+  installed: false
+  language: MyString
+  last_name: MyString
+  first_name: MyString
+  middle_name: MyString
+  locale: MyString
+  name: MyString
+  name_format: MyString
+  political: MyString
+  relationship_status: MyString
+  religion: MyString

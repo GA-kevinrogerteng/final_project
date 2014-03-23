@@ -1,0 +1,18 @@
+<div>
+  Text: <input ng-model="message"><br>
+  Type:
+  <select ng-model="fb_type" ng-init="fb_type='all'">
+    <option value="all">All</option>
+    <option value="status">Status</option>
+    <option value="link">Link</option>
+    <option value="photo">Photo</option>
+    <option value="video">Video</option>
+  </select><br>
+  <button ng-click="updatePosts()">
+    Update
+  </button>
+
+</div>
+<p ng-repeat="post in posts">
+  {{post}}
+</p><br/>
