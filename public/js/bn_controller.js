@@ -1,5 +1,20 @@
 var BetterNewsApp = angular.module("BetterNewsApp", ["ngRoute"]);
 
+BetterNewsApp.directive('fbRender', function() {
+  return function(scope, element, attrs) {
+    if (scope.$last){
+      FB.init({
+        appId      : '563048747135539',
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+      FB.XFBML.parse(document.getElementById(attrs.fbRender));
+    }
+  };
+})
+
+
 BetterNewsApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
@@ -56,10 +71,6 @@ function onAuth(authResponse) {
       t:   authResponse.accessToken,
       e:   authResponse.expiresIn 
     };
-
-    // window.location.href = '/posts?uid=' + authResponse.userID
-    //   + '&t=' + authResponse.accessToken
-    //   + '&e=' + authResponse.expiresIn;
 
     window.location.hash = '#/posts';
   }

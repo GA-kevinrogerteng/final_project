@@ -1,4 +1,4 @@
-<html ng-app="BetterNewsApp">
+<html ng-app="BetterNewsApp" xmlns:fb="http://ogp.me/ns/fb#">
   <head>
     <title>Better News</title>
 <!--    <link rel="stylesheet" type="text/css" href="css/reset.min.css">
@@ -11,7 +11,7 @@
   <body>
   <div id="fb-root">
     <div ng-controller="BetterNewsController" class="container">
-      <div ng-view id="fb-root">
+      <div ng-view>
       </div>
     </div>
   </div>
@@ -52,6 +52,9 @@
       // dialog right after they log in to Facebook. 
       // The same caveats as above apply to the FB.login() call here.
       //FB.login(function(response) {}, {scope: 'email,user_likes,read_stream'});
+
+      window.location.hash = '#/login';
+
     }
   });
   };
@@ -61,16 +64,12 @@
    var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
    if (d.getElementById(id)) {return;}
    js = d.createElement('script'); js.id = id; js.async = true;
-   js.src = "//connect.facebook.net/en_US/all.js";
+   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=563048747135539";
    ref.parentNode.insertBefore(js, ref);
   }(document));
 
 
 </script>
-
-<!--
-  Below we include the Login Button social plugin. This button uses the JavaScript SDK to
-  present a graphical Login button that triggers the FB.login() function when clicked. -->
 
 </body>
 </html>
