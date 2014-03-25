@@ -29,7 +29,7 @@
     </span>
     <span ng-if="post.fb_type=='photo'">
       {{post.story}} <br/> {{post.message}} <br/>{{post.name}}<br/>
-      <img ng-src="{{post.picture}}">
+      <a href="{{post.link}}"><img ng-src="{{post.picture}}"></a>
     </span>
     <span ng-if="post.fb_type=='link'">
       {{post.story}} <br/> {{post.name}}<br/> {{post.message}} <br/>

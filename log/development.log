@@ -19591,3 +19591,465 @@ Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 2.7ms)
   [1m[35m (0.3ms)[0m  BEGIN
   [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "object_id", "picture", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:06:27 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:05:59 UTC +00:00], ["fb_id", "1557050359_10203154721259687"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "1557050359"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=678442815524672&set=at.678442212191399.1073742134.100000768784165.1557050359&type=1&relevant_count=3"], ["object_id", "678442815524672"], ["picture", "https://fbcdn-photos-e-a.akamaihd.net/hphotos-ak-ash3/t1.0-0/1960095_678442815524672_59349823_s.jpg"], ["story", "Pablo Rebecchi was tagged in Pasiòn Por El Tango's photos."], ["updated_at", Tue, 25 Mar 2014 18:06:27 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:05:59 UTC +00:00]]
   [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=6472&fb_type=all&t=CAAIAFwCQcjMBAPjR3ZAw1mI8E0wmZBi4uiZApUmwOTBgGKmmPs8867ZBsZBx8PZB4ZBZA2Ge4etZA8d2Wc5ogdAPqwPOdDl1auk1ZAXxdkPOZBOh5s9zrzkLju4GIqbZCZBwXwq1SNSxbQRnheHx7NZCKjWIGhgZBNaNBJ3EZB76aGxzM0rZB3w8CaTL5mrtqMhZACVkBwmpJuZAhFpZC1ZCwWQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:12:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6472", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAPjR3ZAw1mI8E0wmZBi4uiZApUmwOTBgGKmmPs8867ZBsZBx8PZB4ZBZA2Ge4etZA8d2Wc5ogdAPqwPOdDl1auk1ZAXxdkPOZBOh5s9zrzkLju4GIqbZCZBwXwq1SNSxbQRnheHx7NZCKjWIGhgZBNaNBJ3EZB76aGxzM0rZB3w8CaTL5mrtqMhZACVkBwmpJuZAhFpZC1ZCwWQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 1.6ms)
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1185673684_10202590550703040' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 18:12:15 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:07:40 UTC +00:00], ["fb_id", "1185673684_10202590550703040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1185673684"], ["story", "Tascha Babitch commented on a status."], ["updated_at", Tue, 25 Mar 2014 18:12:15 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:07:40 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '229113637187732_561034500662309' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "object_id", "picture", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["category", "Actor/director"], ["created_at", Tue, 25 Mar 2014 18:12:15 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:07:11 UTC +00:00], ["fb_id", "229113637187732_561034500662309"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "229113637187732"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=561034483995644&set=a.438042116294882.1073741825.229113637187732&type=1&relevant_count=1"], ["object_id", "561034483995644"], ["picture", "https://fbcdn-photos-h-a.akamaihd.net/hphotos-ak-frc3/t1.0-0/1970690_561034483995644_1111758213_s.jpg"], ["story", "Meryem Uzerli added a new photo."], ["updated_at", Tue, 25 Mar 2014 18:12:15 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:11:11 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '592181259_10151949442281260' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 18:12:15 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:07:07 UTC +00:00], ["fb_id", "592181259_10151949442281260"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "592181259"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "http://sashacagen.com/advice/teach/"], ["message", "A blog post about developing the confidence to teach . . . it was a big hurdle for me to realize that teaching doesn't mean that you are the expert, necessarily. It means that you are holding space for yourself and others to learn. I learned that lesson from Jen Louden and it made a big difference for me moving forward teaching others."], ["name", "What are you here to teach? - Sasha Cagen: Author of Quirkyalone + To-Do List, life coach,..."], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQBDvfkPtHhYyyDU&w=154&h=154&url=http%3A%2F%2Fsashacagen.com%2Fwp-content%2Fuploads%2F2014%2F03%2Fcropped-quirkycoachingcommunity.jpg"], ["updated_at", Tue, 25 Mar 2014 18:12:15 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:07:07 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=6380&fb_type=all&t=CAAIAFwCQcjMBABPvvQ0ZBBo9dGZA26jJ2QuFHLEbjyVjZBraG969MHZBUDcDLvt6oGA0bwylgFythtLEkd16gQpqFlg4t4YlLzUc5grR1MQoVfTZBGjdrvAdqVjrSEn35YdbdMEMXiS4eKhvmPtOAbOjFZCZAEnbKVfj8S33cOqEjW4c5FlqXhsKXARSYkwKbkO6lzFzpbSWAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:14:01 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6380", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBABPvvQ0ZBBo9dGZA26jJ2QuFHLEbjyVjZBraG969MHZBUDcDLvt6oGA0bwylgFythtLEkd16gQpqFlg4t4YlLzUc5grR1MQoVfTZBGjdrvAdqVjrSEn35YdbdMEMXiS4eKhvmPtOAbOjFZCZAEnbKVfj8S33cOqEjW4c5FlqXhsKXARSYkwKbkO6lzFzpbSWAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1065266060_10202245551274613' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:14:03 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:13:28 UTC +00:00], ["fb_id", "1065266060_10202245551274613"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "1065266060"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10202245551194611&set=a.10201854984430686.1073741826.1065266060&type=1&relevant_count=1"], ["message", "Finally have a fun number Gretch!!"], ["name", "iOS Photos"], ["object_id", "10202245551194611"], ["picture", "https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-prn2/t1.0-0/10001369_10202245551194611_1355076441_s.jpg"], ["updated_at", Tue, 25 Mar 2014 18:14:03 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:13:28 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '701709773_10152257277319774' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:14:03 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:13:05 UTC +00:00], ["fb_id", "701709773_10152257277319774"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "701709773"], ["message", "Via Buenos Aires!!!"], ["updated_at", Tue, 25 Mar 2014 18:14:03 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:13:05 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=6342&fb_type=status&t=CAAIAFwCQcjMBAApkU4eLIZARbu0WhU2po1jZCX2SUopRr9FRaXI27Wrw0ZBGYiKpqXZAhO2XwGWxqMuadhG5fdLfFN4ZA9GekEtBddo9iE03ZAX2ZCEWH9RuCvh4t5ZCX9mrZCvwcVuGEIp5Pp4bqbIceRZAZAYL1k394Ya2v6E1ZCZAB1aJZCTL9GxaJZCjQ69HvmZBPCaP7QiQuGrW4wZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:14:25 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6342", "fb_type"=>"status", "t"=>"CAAIAFwCQcjMBAApkU4eLIZARbu0WhU2po1jZCX2SUopRr9FRaXI27Wrw0ZBGYiKpqXZAhO2XwGWxqMuadhG5fdLfFN4ZA9GekEtBddo9iE03ZAX2ZCEWH9RuCvh4t5ZCX9mrZCvwcVuGEIp5Pp4bqbIceRZAZAYL1k394Ya2v6E1ZCZAB1aJZCTL9GxaJZCjQ69HvmZBPCaP7QiQuGrW4wZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (3.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'status' LIMIT 30[0m
+Completed 200 OK in 37ms (Views: 26.5ms | ActiveRecord: 3.2ms)
+  [1m[36mPost Load (2.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=6315&fb_type=all&t=CAAIAFwCQcjMBAKZC1RJwB3zJjUkcAlkiPZAcJIpfbAk3E1UtyeMs9L0BZCDSwjhPn8rfgVpBKTYPU36g23SYeZBXR8ZADTlMLx7aFbq36O6BZCd0C3ZCSIyTfhY9dvbJdv8klrKcGDrQ4disPAsdMwWR5FTIV2cd6STZA84MkxKbeAyHmPN9ZAYfk80D6VsvuYsBg6sq7xQvSzgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:14:47 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6315", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAKZC1RJwB3zJjUkcAlkiPZAcJIpfbAk3E1UtyeMs9L0BZCDSwjhPn8rfgVpBKTYPU36g23SYeZBXR8ZADTlMLx7aFbq36O6BZCd0C3ZCSIyTfhY9dvbJdv8klrKcGDrQ4disPAsdMwWR5FTIV2cd6STZA84MkxKbeAyHmPN9ZAYfk80D6VsvuYsBg6sq7xQvSzgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts.json?e=6313&fb_type=all&t=CAAIAFwCQcjMBAFKVhdsRZCyz47q7AgR5zcpyQsDpY2mLzWfuz8E2vplz2qLlJ3LoFT8gda4DbxGqlCkXS5VAfThZAa9EsGqL0UxG5xoijsccTCyjsQcmAwK3oNSrsKFGOgW6OaVutANdr2ZAJjf8ZC7OZAKFNbk6S9zNL47ynsS7McOStuHtOsf7V3p9QiN722hZBe7zEx0AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:15:00 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6313", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAFKVhdsRZCyz47q7AgR5zcpyQsDpY2mLzWfuz8E2vplz2qLlJ3LoFT8gda4DbxGqlCkXS5VAfThZAa9EsGqL0UxG5xoijsccTCyjsQcmAwK3oNSrsKFGOgW6OaVutANdr2ZAJjf8ZC7OZAKFNbk6S9zNL47ynsS7McOStuHtOsf7V3p9QiN722hZBe7zEx0AZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts.json?e=6300&fb_type=photo&t=CAAIAFwCQcjMBAHm8KGJxMf9jUHVHrHEaafpoo5RQ50eMDuct7C9Evi0yptU4GMPZCVsyFrhiWKsdguBqs1iONoO0nDYSTUkB1z1yHZB6BQ7ZBeUZC7zsYpkq9dAZAlbBc7C7a48Fcth1oPF8eGBdtuVzIzhhBIu4whkeZBXvTaEQ8rQbJcJRn1lbFFOUhMy6exZBdTEhCYyHgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:15:04 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6300", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAHm8KGJxMf9jUHVHrHEaafpoo5RQ50eMDuct7C9Evi0yptU4GMPZCVsyFrhiWKsdguBqs1iONoO0nDYSTUkB1z1yHZB6BQ7ZBeUZC7zsYpkq9dAZAlbBc7C7a48Fcth1oPF8eGBdtuVzIzhhBIu4whkeZBXvTaEQ8rQbJcJRn1lbFFOUhMy6exZBdTEhCYyHgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/posts.json?e=6166&fb_type=all&t=CAAIAFwCQcjMBAJ2xmLrAlOjGkUf3oZCh1K9xu7Q80CxCu9QB5cFPEBZBZCOM0OBzc69f1tre1b8rG3T1ZBuykwk3vM6pQKEmFmppheiv98wjPZCxZCup7PNVNZCX8jCwGoZCeg3LXifWkQvObh37qa6LnN5XBYZAZAP5edPI5y1F9kBBZAIOXwQvx6HcJMZC2OmoaUCNZApC1p7ZBpWgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:17:15 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6166", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAJ2xmLrAlOjGkUf3oZCh1K9xu7Q80CxCu9QB5cFPEBZBZCOM0OBzc69f1tre1b8rG3T1ZBuykwk3vM6pQKEmFmppheiv98wjPZCxZCup7PNVNZCX8jCwGoZCeg3LXifWkQvObh37qa6LnN5XBYZAZAP5edPI5y1F9kBBZAIOXwQvx6HcJMZC2OmoaUCNZApC1p7ZBpWgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 1.6ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:17:17 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:17:17 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=6126&fb_type=all&t=CAAIAFwCQcjMBAMZCEfqMeJ9MWXnVWt2i9wo8lm9vtCC4uxm4a8zLnXIs2EGNZCDy9d8kCHMlB9DVIpNllB7Q0po30iuJtsL0xytm1Jw3kTIie4ZA2bkZBGHY164EIkb19MZB1VDdHNvBrTvJtKxz8g7dR0xomq36R9npoXvcNfQouPEsByXhPx5V9KwHTT9CVJdcGbWdcdwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:17:55 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6126", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMZCEfqMeJ9MWXnVWt2i9wo8lm9vtCC4uxm4a8zLnXIs2EGNZCDy9d8kCHMlB9DVIpNllB7Q0po30iuJtsL0xytm1Jw3kTIie4ZA2bkZBGHY164EIkb19MZB1VDdHNvBrTvJtKxz8g7dR0xomq36R9npoXvcNfQouPEsByXhPx5V9KwHTT9CVJdcGbWdcdwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 88ms (Views: 84.7ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:17:57 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:17:57 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=6097&fb_type=all&t=CAAIAFwCQcjMBANINj7ETVV5KlsOYROUtUjnjnvzfG7OPjf30hjAt1QZCweJsWhn4riBn2WonLGxg1HZAwWIp52HZC37QgA35ttUeqT5G00emRGDsqMhKKfIGAZBuPkLJsfa019wFUeDKuVRlMc67As97pUwz7WZADqoUnIZCpZAnMJaTjpoF7X9RKvMAvQmp1tVcELz7Rm10QZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:18:24 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6097", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBANINj7ETVV5KlsOYROUtUjnjnvzfG7OPjf30hjAt1QZCweJsWhn4riBn2WonLGxg1HZAwWIp52HZC37QgA35ttUeqT5G00emRGDsqMhKKfIGAZBuPkLJsfa019wFUeDKuVRlMc67As97pUwz7WZADqoUnIZCpZAnMJaTjpoF7X9RKvMAvQmp1tVcELz7Rm10QZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 1.3ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '127281007351058_10151949454676260' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["category", "Author"], ["created_at", Tue, 25 Mar 2014 18:18:27 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:17:56 UTC +00:00], ["fb_id", "127281007351058_10151949454676260"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "127281007351058"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "http://sashacagen.com/advice/teach/"], ["message", "A blog post about developing the confidence to teach . . . it was a big hurdle for me to realize that teaching doesn't mean that you are the expert, necessarily. It means that you are holding space for yourself and others to learn. I learned that lesson from Jen Louden and it made a big difference for me moving forward teaching others. http://sashacagen.com/advice/teach/"], ["name", "What are you here to teach? - Sasha Cagen: Author of Quirkyalone + To-Do List, life coach,..."], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQBDvfkPtHhYyyDU&w=154&h=154&url=http%3A%2F%2Fsashacagen.com%2Fwp-content%2Fuploads%2F2014%2F03%2Fcropped-quirkycoachingcommunity.jpg"], ["updated_at", Tue, 25 Mar 2014 18:18:27 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:17:56 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=6052&fb_type=all&t=CAAIAFwCQcjMBAAYjrFl4CZCQhgIAEQBHvsIbmi2y018MWEZAQs6nZCXirQL7JeOAQdZAZASh4gYXn4WF9gXOnJKqH9ytTblUr7M0dul0HwpEZAHpmGV0pNznxVtzkZBbGDgx1kr9MYPszK1ZAFGKGUxL6WfHkZC7YWEeu6lzfGAYvdk9wZAUJOu3vHU0ZAWH8lSaHJKkAZAY5HvlAwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:19:09 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6052", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAAYjrFl4CZCQhgIAEQBHvsIbmi2y018MWEZAQs6nZCXirQL7JeOAQdZAZASh4gYXn4WF9gXOnJKqH9ytTblUr7M0dul0HwpEZAHpmGV0pNznxVtzkZBbGDgx1kr9MYPszK1ZAFGKGUxL6WfHkZC7YWEeu6lzfGAYvdk9wZAUJOu3vHU0ZAWH8lSaHJKkAZAY5HvlAwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:19:11 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:19:11 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=6025&fb_type=all&t=CAAIAFwCQcjMBAEQlhJ4uhRBkQALXSSfzHWHYtMNrUcY7i6ZBYzTAZAZBDSfvuZCUISXNYjwrSSIEliZCIShbmVZC84JA4qtOY5lpmGJpaZCe1Ox53GEPvDS7yVyiJSXK2L9N6gDix6oAGyZBIFIcaZBaphg21qFAqpFQxkesBoDzRZAYuOdSqI1hwiZCRwYTsT18xj5XY2wopdJ1gZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:19:36 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6025", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAEQlhJ4uhRBkQALXSSfzHWHYtMNrUcY7i6ZBYzTAZAZBDSfvuZCUISXNYjwrSSIEliZCIShbmVZC84JA4qtOY5lpmGJpaZCe1Ox53GEPvDS7yVyiJSXK2L9N6gDix6oAGyZBIFIcaZBaphg21qFAqpFQxkesBoDzRZAYuOdSqI1hwiZCRwYTsT18xj5XY2wopdJ1gZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (3.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 3.2ms)
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:19:38 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:19:38 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5997&fb_type=all&t=CAAIAFwCQcjMBAMJtN0wLomsqtcyqv26TSq5nOdDwS2vckN7T4ZCrt5jShiyeYZCKU4ewabNw6SE8FNSZBgjtMV2KOzsoL5TyEtMtVEgVmnee5MGq6fTNdAxbeXhT4p63F2kunS85BSOOFvmBt3MOQhZB6EGVr8TArQ3UMyHr7OxyFht2hFGezZAcy2NEIi5Npc20IZCrBmewZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:20:04 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5997", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMJtN0wLomsqtcyqv26TSq5nOdDwS2vckN7T4ZCrt5jShiyeYZCKU4ewabNw6SE8FNSZBgjtMV2KOzsoL5TyEtMtVEgVmnee5MGq6fTNdAxbeXhT4p63F2kunS85BSOOFvmBt3MOQhZB6EGVr8TArQ3UMyHr7OxyFht2hFGezZAcy2NEIi5Npc20IZCrBmewZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:20:06 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:20:06 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5974&fb_type=all&t=CAAIAFwCQcjMBAEbZCG8nMiPSTU0REanhZCZBO9BOVvZAxOTorh731qsMdoEt8gUiBOoaHKAPwZBXZBBE7rnZA2GOa7HaWKBJ4BMtZCHpuVEM2HZCjpm4ZBZCJ9afZAouVrMyAhTiXOLTIjh81MAK5S5WZByZBTeBQ9aLHkAUWaf2aGSSZAnpEsxiqYiwCi37lvV6KN4iDLvPqnHIDIGZCgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:20:27 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5974", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAEbZCG8nMiPSTU0REanhZCZBO9BOVvZAxOTorh731qsMdoEt8gUiBOoaHKAPwZBXZBBE7rnZA2GOa7HaWKBJ4BMtZCHpuVEM2HZCjpm4ZBZCJ9afZAouVrMyAhTiXOLTIjh81MAK5S5WZByZBTeBQ9aLHkAUWaf2aGSSZAnpEsxiqYiwCi37lvV6KN4iDLvPqnHIDIGZCgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 20.2ms | ActiveRecord: 2.1ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:20:29 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:20:29 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5940&fb_type=all&t=CAAIAFwCQcjMBAAVV41aL2ZCF24mraTWg6QQKh9jcBgtOoQOy4HD7GeKSydsZBf1B5DS43lWKsCPvTGPXyYJatnuPqm8upCTTbSkVTtCsuxhg7XIO7vgCtcCzBnSiUFam3rISmcVcdTGguFzWO6wNuGcLRixOLCBURwAbZCVxyU5vatdfLS8TttClzXg3zxfPI2kbTD0VAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:21:01 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5940", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAAVV41aL2ZCF24mraTWg6QQKh9jcBgtOoQOy4HD7GeKSydsZBf1B5DS43lWKsCPvTGPXyYJatnuPqm8upCTTbSkVTtCsuxhg7XIO7vgCtcCzBnSiUFam3rISmcVcdTGguFzWO6wNuGcLRixOLCBURwAbZCVxyU5vatdfLS8TttClzXg3zxfPI2kbTD0VAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 1.4ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:21:03 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:21:03 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5918&fb_type=all&t=CAAIAFwCQcjMBAMj5PvBGGoluGHEfLkBr1NR1Woby0UvaxeAOILpIBkWnPDnkOQ6F3eFWlFZALEcZAOYJW9H8LHg4Igpg6HUbCowJPZCh7lUaa1ZBKeIInOTtwkiMLY4etB7AIRbfsZAcUnZCDidZCMF0g7zb8GLZANS3Pu5mDuZBec6ZAPwpF3N8zA5s2yZCF9tFIXdQezMIngblwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:21:23 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5918", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMj5PvBGGoluGHEfLkBr1NR1Woby0UvaxeAOILpIBkWnPDnkOQ6F3eFWlFZALEcZAOYJW9H8LHg4Igpg6HUbCowJPZCh7lUaa1ZBKeIInOTtwkiMLY4etB7AIRbfsZAcUnZCDidZCMF0g7zb8GLZANS3Pu5mDuZBec6ZAPwpF3N8zA5s2yZCF9tFIXdQezMIngblwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 1.8ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:21:25 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:21:25 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5886&fb_type=all&t=CAAIAFwCQcjMBABoO7fPZBzJzvosF1MEZAZBwKDHewnKNGbUKeoOCuEy2oZBZC4AOZBpvm7XpekxZAZAqVpVUMVZAlHwSoet8kuZBZCMWQRsDSlzFviqHbrtrxuqLge0s6TfNADKZAWO39jMFHTQ7hNRrS65bOIRGKjsZA1Sl3VLcHCviDLTgA31ODwatNUWHTCBAZB3fcpRrPFh3XXAQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:21:54 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5886", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBABoO7fPZBzJzvosF1MEZAZBwKDHewnKNGbUKeoOCuEy2oZBZC4AOZBpvm7XpekxZAZAqVpVUMVZAlHwSoet8kuZBZCMWQRsDSlzFviqHbrtrxuqLge0s6TfNADKZAWO39jMFHTQ7hNRrS65bOIRGKjsZA1Sl3VLcHCviDLTgA31ODwatNUWHTCBAZB3fcpRrPFh3XXAQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 1.8ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:21:56 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:21:56 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5813&fb_type=all&t=CAAIAFwCQcjMBAA09ZAQJr44ZBEzMys3oruXQ2wmgAdQTdBK3AvZBTzonkZAQvopFPENPzMD7HlJlLZCkgdjpehBly9qiWsyZC4aVJmFNiEor6hEvIFcPUToKLUgUZAD3ZAuuiACS4WUVNeDUHK3cuso6rERya1VWJYLt9UGSqla6u7BL4LySZBuCm4bZC5YNGZC5ZBYXgUwXVrB0CAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:23:08 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5813", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAA09ZAQJr44ZBEzMys3oruXQ2wmgAdQTdBK3AvZBTzonkZAQvopFPENPzMD7HlJlLZCkgdjpehBly9qiWsyZC4aVJmFNiEor6hEvIFcPUToKLUgUZAD3ZAuuiACS4WUVNeDUHK3cuso6rERya1VWJYLt9UGSqla6u7BL4LySZBuCm4bZC5YNGZC5ZBYXgUwXVrB0CAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 1.5ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (1.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:23:10 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:23:10 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5786&fb_type=all&t=CAAIAFwCQcjMBAOgC3thEBisHOOX6SLsAfNMxyMZAZBndqQJl9HZApYpZBbaSw2qusvVS0obZCSEVdPBKIVzOeRcSUMFB5jZACCqwmVV351YG8TqMzbwHSw1BHMJYOUCPc4TZC4RbZAFFXV2H3KFWSfFIThbMQ2ir1ZCJvoqWnP7CCY4bRccYqaMjw36mJENA35jTXe2ZBPmVPtZBwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:23:36 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5786", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAOgC3thEBisHOOX6SLsAfNMxyMZAZBndqQJl9HZApYpZBbaSw2qusvVS0obZCSEVdPBKIVzOeRcSUMFB5jZACCqwmVV351YG8TqMzbwHSw1BHMJYOUCPc4TZC4RbZAFFXV2H3KFWSfFIThbMQ2ir1ZCJvoqWnP7CCY4bRccYqaMjw36mJENA35jTXe2ZBPmVPtZBwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 1.9ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:23:38 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:23:38 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5762&fb_type=all&t=CAAIAFwCQcjMBAEAxPKC7FcCLHK7v1ABqrZBSciryvzHB61CgUSfdZAgB8QtbjO03YxZCK0kzrZCgqWoZBRfH1HnLgpXZCGqjq5lViqHTdn9scVHCt1a7n1c0YO6XQMAEZBTOsV1UIW5HlC6c4oqgecZASLRYeZBKslTEjPFziSFmOHyy753DlO7lKQJAZBZCSrk0JPMWHZBYLPMvJwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:23:59 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5762", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAEAxPKC7FcCLHK7v1ABqrZBSciryvzHB61CgUSfdZAgB8QtbjO03YxZCK0kzrZCgqWoZBRfH1HnLgpXZCGqjq5lViqHTdn9scVHCt1a7n1c0YO6XQMAEZBTOsV1UIW5HlC6c4oqgecZASLRYeZBKslTEjPFziSFmOHyy753DlO7lKQJAZBZCSrk0JPMWHZBYLPMvJwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 1.9ms)
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:24:00 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:24:00 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5723&fb_type=all&t=CAAIAFwCQcjMBAHJkGEMx0a0xZBciyLy8v6IelYG9ilVkfPGzr6cXP8YZBs2UwExasDR3Uoenr2AEssiFMormfZANh329ViJgxk4w5iCU0pz42msjEpyOSzZBXpAju0gOQihEl5JoRBd6SD2G8QLHrxVJKLU0V1JBzRk0BoJ8MS3Pmz3wD0rYXH2CGwng5TeUueFyhbvqCgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:24:37 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5723", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAHJkGEMx0a0xZBciyLy8v6IelYG9ilVkfPGzr6cXP8YZBs2UwExasDR3Uoenr2AEssiFMormfZANh329ViJgxk4w5iCU0pz42msjEpyOSzZBXpAju0gOQihEl5JoRBd6SD2G8QLHrxVJKLU0V1JBzRk0BoJ8MS3Pmz3wD0rYXH2CGwng5TeUueFyhbvqCgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 1.3ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:24:44 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:24:44 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5659&fb_type=all&t=CAAIAFwCQcjMBAB8JAhVL1wICn97L90ZCtrqVfmtBl8isgMgs2R3kgZC23ZB3DogZAWMtCMDSMegJuI95pXnZChMNb82kX3weJ84qCExOrlCGzfCAQwZBjVZB8v3AmiYvkuYqEbZB33cdWTKP1BZCCujFko2VjGY0M8jP8rdqKcgLgRJFIF9P5Xu2PUXZB4Szi4mPZBpgIq3oEJYkwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:25:41 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5659", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAB8JAhVL1wICn97L90ZCtrqVfmtBl8isgMgs2R3kgZC23ZB3DogZAWMtCMDSMegJuI95pXnZChMNb82kX3weJ84qCExOrlCGzfCAQwZBjVZB8v3AmiYvkuYqEbZB33cdWTKP1BZCCujFko2VjGY0M8jP8rdqKcgLgRJFIF9P5Xu2PUXZB4Szi4mPZBpgIq3oEJYkwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 1.4ms)
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:25:44 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:25:44 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5561&fb_type=all&t=CAAIAFwCQcjMBABCRN5gtDGcZAfcMpHwenzJKZBMS0S2n8cN4unnZAcpeZB05zgXdCqGLpB2y8uoVzKHn0KeEnSEd5xzKdpjnNz4JLGpB5DRBNZBPNZCZABWtPicK5LEkA61yNOZANClowiC1XnWNkiz6ZCxcUM0px8MNGLW2hnA3O6WM1JZA67tpcf5MMqVpHZCOPjjC04znQhIeAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:27:20 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5561", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBABCRN5gtDGcZAfcMpHwenzJKZBMS0S2n8cN4unnZAcpeZB05zgXdCqGLpB2y8uoVzKHn0KeEnSEd5xzKdpjnNz4JLGpB5DRBNZBPNZCZABWtPicK5LEkA61yNOZANClowiC1XnWNkiz6ZCxcUM0px8MNGLW2hnA3O6WM1JZA67tpcf5MMqVpHZCOPjjC04znQhIeAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 1.8ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:27:22 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:27:22 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5535&fb_type=all&t=CAAIAFwCQcjMBAIXlmY3xe1mZASEO6DB0ZAHgDyZBSFqulxLQGM2bjIKIZBqVxgp2N6BbS22uXRBUwr3oy2XL1tE4sgxYhDsyLNe1NHAuzbg00BcYVdyIXgu8RZChf9ZB8TAezyR3VddH4wZAI0ZA8yPSK6iMxluMLC4k0kb2e52nnlOuJ1RpMaHkCKvnhOz1MJXiDEZAPfuuw2AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:27:46 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5535", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAIXlmY3xe1mZASEO6DB0ZAHgDyZBSFqulxLQGM2bjIKIZBqVxgp2N6BbS22uXRBUwr3oy2XL1tE4sgxYhDsyLNe1NHAuzbg00BcYVdyIXgu8RZChf9ZB8TAezyR3VddH4wZAI0ZA8yPSK6iMxluMLC4k0kb2e52nnlOuJ1RpMaHkCKvnhOz1MJXiDEZAPfuuw2AZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 1.5ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:27:49 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:27:49 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5502&fb_type=all&t=CAAIAFwCQcjMBAAU8mO0716eotxZBHZAAzZBHknT0ZA1mrZAV6L38bYCTimzJmOkDai0chVhgaGoDQcXPXhV96hlZCVahVepNkCZBoCXLKvMGJWwUMK2P346Ao2sp7eR6vMA8fzEZCsJVbIfeZBSekIERzKkBIQL7Xv13paM2xkZBPncZBz3SkpKzS6xHZACMGMYcZBjqECQKup1vKjgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:28:19 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5502", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAAU8mO0716eotxZBHZAAzZBHknT0ZA1mrZAV6L38bYCTimzJmOkDai0chVhgaGoDQcXPXhV96hlZCVahVepNkCZBoCXLKvMGJWwUMK2P346Ao2sp7eR6vMA8fzEZCsJVbIfeZBSekIERzKkBIQL7Xv13paM2xkZBPncZBz3SkpKzS6xHZACMGMYcZBjqECQKup1vKjgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 1.9ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:28:20 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:28:20 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.2ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5490&fb_type=all&t=CAAIAFwCQcjMBAJ8bFZBv6z5qS6ZBN4T0aaAWorYo0G7H7ZApXGG60csCns86mD15ZBqtofzKdO9ypU5hi35H3425gCYJw4BI9LNmZAxoIZA4TqjoC3DaZC7HhV33q3W8EOGZBmsVOyG0VFkSknMiOutNc9LkgfSWmHAnegTVt1pefnMiNy9mzGjT4luXA8ZBzDeUnue94ViZB6ZCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:28:31 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5490", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAJ8bFZBv6z5qS6ZBN4T0aaAWorYo0G7H7ZApXGG60csCns86mD15ZBqtofzKdO9ypU5hi35H3425gCYJw4BI9LNmZAxoIZA4TqjoC3DaZC7HhV33q3W8EOGZBmsVOyG0VFkSknMiOutNc9LkgfSWmHAnegTVt1pefnMiNy9mzGjT4luXA8ZBzDeUnue94ViZB6ZCAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 80.3ms | ActiveRecord: 2.1ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:28:33 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:28:33 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=5324&fb_type=all&t=CAAIAFwCQcjMBAF6Hw5RFmUwLEwpIZBCz0v0Ih0dZCfqdx735J80uRrcmBZACwVsqZAzZAwuKBLSDqYR28XLRf7lEx7W1TkZAI5wjjPgcoOQvv460qpZAgjFouV7Tb5e9x1ZBIZB3Gm7yvD2HFxZABEPCEr0aPGrfgfrshZAmF4h0ln8T0lupQy47u3dc5g4LFVZBZAUAYS4dwSCW6igZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:31:17 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5324", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAF6Hw5RFmUwLEwpIZBCz0v0Ih0dZCfqdx735J80uRrcmBZACwVsqZAzZAwuKBLSDqYR28XLRf7lEx7W1TkZAI5wjjPgcoOQvv460qpZAgjFouV7Tb5e9x1ZBIZB3Gm7yvD2HFxZABEPCEr0aPGrfgfrshZAmF4h0ln8T0lupQy47u3dc5g4LFVZBZAUAYS4dwSCW6igZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 1.3ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1119855744_10201892121840918' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:31:18 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:28:44 UTC +00:00], ["fb_id", "1119855744_10201892121840918"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "1119855744"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "http://elmeme.me/Sol/54-ejemplos-de-que-en-la-moda-ya-esta-todo-inventado_35815?utm_content=bufferb6c27&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer"], ["message", "nice"], ["name", "54 ejemplos de que en la moda ya está todo inventado"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQDztlNV1oz3Ajov&w=154&h=154&url=http%3A%2F%2Felmeme.me%2Fstatic%2Fuploads%2Fimages%2F2014%2F03%2F35815%2F35815_main_square_140x105%402x.jpg"], ["updated_at", Tue, 25 Mar 2014 18:31:18 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:28:44 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '502076629841176_634207976628040' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["category", "Product/service"], ["created_at", Tue, 25 Mar 2014 18:31:18 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00], ["fb_id", "502076629841176_634207976628040"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "502076629841176"], ["message", "LI B WOMEN'S & MEN'S SHOES WILL BE SHOWCASED AT 3 DIFFERENT MILONGAS:\n\nMARCH 28 - 4 YEAR ANNIVERSARY OF LIBERTAD PRACTIMILONGA\nHeartbeat House Dance Studio, 3141 Glendale Blvd., Los Angeles, 90039\n\nMARCH 29 - GRAND OPENING OF GRAND MILONGA\nAvant Garde Ballroom, 4220 Scott Dr. Newport Beach, 92660\n\nMARCH 30 - MILONGA EL GRIENGO\nBy Your Side Dance Studio, 12613 Washington Blvd., Los Angeles, 90066"], ["updated_at", Tue, 25 Mar 2014 18:31:18 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:16:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=5304&fb_type=all&t=CAAIAFwCQcjMBANFag9vEJFsZCkUGscwZAlMhiuWkkGPSGmxA2ljZBqibEpne2VNg93zmGmevQnkyZCc6YYyU11RtSapRTbBhSqlafcPmyphiZCmWA1gaHwMZCUTQIBQhiyugKfhZBhZC8EaB2YUraKyP5Gr099kyRQ3IY6sofOdtIRSlbxMSaCWh3qZCxihJ9ZADZBY2sJdZAFvZCZCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:31:37 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5304", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBANFag9vEJFsZCkUGscwZAlMhiuWkkGPSGmxA2ljZBqibEpne2VNg93zmGmevQnkyZCc6YYyU11RtSapRTbBhSqlafcPmyphiZCmWA1gaHwMZCUTQIBQhiyugKfhZBhZC8EaB2YUraKyP5Gr099kyRQ3IY6sofOdtIRSlbxMSaCWh3qZCxihJ9ZADZBY2sJdZAFvZCZCAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+  [1m[36mPost Load (4.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+Completed 200 OK in 26ms (Views: 20.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/posts.json?e=5303&fb_type=all&message=cat&t=CAAIAFwCQcjMBAJwh8q9pkWZA07PweDDEVmD0aVOcGNThaGK2PmOSrprqxz6PfVovmDbNj9XFoWUr8raQBK8vXe7oQIZBHjxeiR8IzWzPzgWx8Awy7YCgywfwKthBPasmrPU6t3yynZCcZAKjCD3QBmXZBwUAu7wnIeJ30fdQXijNt7JoeXCZA1GiplmBCn8PF2w3VX5lbGLwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:32:15 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5303", "fb_type"=>"all", "message"=>"cat", "t"=>"CAAIAFwCQcjMBAJwh8q9pkWZA07PweDDEVmD0aVOcGNThaGK2PmOSrprqxz6PfVovmDbNj9XFoWUr8raQBK8vXe7oQIZBHjxeiR8IzWzPzgWx8Awy7YCgywfwKthBPasmrPU6t3yynZCcZAKjCD3QBmXZBwUAu7wnIeJ30fdQXijNt7JoeXCZA1GiplmBCn8PF2w3VX5lbGLwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%cat%') LIMIT 30
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+  [1m[35mPost Load (4.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=5265&fb_type=all&message=&t=CAAIAFwCQcjMBAHvAvNwkI1Qi3BgnWPuwZBdjGjjPY5K6X9oeHTAsWdZBky2jZAemxZCP7t0wlkcpDkOtzmbZC3hl12lVVaM4J6WmWgiVpy9x3qHLtyak6irrfzZBZBYQWZBkIZCQNtIhsElJfLM4AZAxuKnxZAZAJSHFoZCQoZBboLZBgym4YOmdDvN7TZAHl3lKMlLisDPrPUtVVuEXpQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:32:28 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5265", "fb_type"=>"all", "message"=>"", "t"=>"CAAIAFwCQcjMBAHvAvNwkI1Qi3BgnWPuwZBdjGjjPY5K6X9oeHTAsWdZBky2jZAemxZCP7t0wlkcpDkOtzmbZC3hl12lVVaM4J6WmWgiVpy9x3qHLtyak6irrfzZBZBYQWZBkIZCQNtIhsElJfLM4AZAxuKnxZAZAJSHFoZCQoZBboLZBgym4YOmdDvN7TZAHl3lKMlLisDPrPUtVVuEXpQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%%') LIMIT 30[0m
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts.json?e=5169&fb_type=all&t=CAAIAFwCQcjMBAIIdkzcslWLVMe344aqCKmyRZABxATy4qCVOAuB4NC0ZA2B3bGaAgOW4ECQ1IlatQcUDX9MlUU0IC5tD9XWiDKOCeFLk4aZB5IBKZB4Ot9jT7rsUqCUoIKmoZBmyS3tJAihEl4WOh2VHajVsrSXO0pzFlrvLj5lsfFGtvM9V4twTBk7InodZAPW1MD6ZAyOAwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:33:52 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5169", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAIIdkzcslWLVMe344aqCKmyRZABxATy4qCVOAuB4NC0ZA2B3bGaAgOW4ECQ1IlatQcUDX9MlUU0IC5tD9XWiDKOCeFLk4aZB5IBKZB4Ot9jT7rsUqCUoIKmoZBmyS3tJAihEl4WOh2VHajVsrSXO0pzFlrvLj5lsfFGtvM9V4twTBk7InodZAPW1MD6ZAyOAwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 2.1ms)
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612855748144' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 18:33:53 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:33:42 UTC +00:00], ["fb_id", "18807449704_10201612855748144"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/htc-one-m8-review/?utm_cid=mash-com-fb-main-link"], ["message", "Will the new HTC One be your next smartphone? "], ["name", "New HTC One Is the Same as the Old HTC One -- and That's Good [REVIEW]"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQDoH4Vk5Sge6-En&w=154&h=154&url=http%3A%2F%2Frack.0.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzAxL0hUQ09uZTEwMjEuYWQ4NmQuanBnCnAJdGh1bWIJMTIwMHg2MjcjCmUJanBn%2F2094f908%2Fde9%2FHTC-One-102-1.jpg"], ["updated_at", Tue, 25 Mar 2014 18:33:53 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:33:42 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=5147&fb_type=all&t=CAAIAFwCQcjMBAMdvuwXyddZBIDOYMadwUcrHjBzvsZBGX2O6i1kTm7Hz0sbCIugZCJ24JMFa0YVMeATgihwH6KZCiyZAwCfNkQzZCWOZAMZB4slM4v29Tk984jXFs7ZCCZCp2pEdxw8oGmTDalFXmFQOefKZCnPvH17gohrZCA8AKArm5uQV1dWgI2lUhMRYnXvm1CZCWJROtW2UoFQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:34:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5147", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMdvuwXyddZBIDOYMadwUcrHjBzvsZBGX2O6i1kTm7Hz0sbCIugZCJ24JMFa0YVMeATgihwH6KZCiyZAwCfNkQzZCWOZAMZB4slM4v29Tk984jXFs7ZCCZCp2pEdxw8oGmTDalFXmFQOefKZCnPvH17gohrZCA8AKArm5uQV1dWgI2lUhMRYnXvm1CZCWJROtW2UoFQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts.json?e=5038&fb_type=all&t=CAAIAFwCQcjMBADoUZBrajyHgFtqxmGWc1Ycz7BnhQrHPP1TPJlvxOoQeQXSLANQ7SZAzZCa7QWD4cz0m6F4dfqPNIivrLbgjMoBKqIyGSJXyXJ4rnVcRbte5w1r6jBqCPZB7UnHnKJQZAlGwl0NWUqCqzpMzEzgMlNDSWadJ0zXBTnMvQPSIxmwom4IrYq4yo7madXyp4AgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:36:03 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5038", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBADoUZBrajyHgFtqxmGWc1Ycz7BnhQrHPP1TPJlvxOoQeQXSLANQ7SZAzZCa7QWD4cz0m6F4dfqPNIivrLbgjMoBKqIyGSJXyXJ4rnVcRbte5w1r6jBqCPZB7UnHnKJQZAlGwl0NWUqCqzpMzEzgMlNDSWadJ0zXBTnMvQPSIxmwom4IrYq4yo7madXyp4AgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1038849873_10202469794519674' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:36:05 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:35:46 UTC +00:00], ["fb_id", "1038849873_10202469794519674"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1038849873"], ["story", "Facundo de la Cruz commented on his own status."], ["updated_at", Tue, 25 Mar 2014 18:36:05 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:35:46 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=5010&fb_type=all&t=CAAIAFwCQcjMBAHOStUWyKZBBebuaZCB7ZBbCBn30sZAqIeyavmbKfOCSaHqexZCoxs1JlWbL5n725letyI8YAYquKNZBLqg1AF4Kp1sMbXOqlyoWCcy6y3ioEvZBwRno29l0oLHZC1GwaOg3ZA0h4SfphUv2Vw6Stf6BJUSQwJBCRiGDC4oUD0eXUxc84cwytAs3zexUUocRlaAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:36:31 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5010", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAHOStUWyKZBBebuaZCB7ZBbCBn30sZAqIeyavmbKfOCSaHqexZCoxs1JlWbL5n725letyI8YAYquKNZBLqg1AF4Kp1sMbXOqlyoWCcy6y3ioEvZBwRno29l0oLHZC1GwaOg3ZA0h4SfphUv2Vw6Stf6BJUSQwJBCRiGDC4oUD0eXUxc84cwytAs3zexUUocRlaAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts.json?e=4956&fb_type=all&t=CAAIAFwCQcjMBAO5XluZAIV06tihvyrGILxM6qmEQGdL7B4V6ySIZCXh05KLFBUhfjTGAbV2co0NQ89SY8Pn64BpnxLygG3LMsQOoBA6WfZCE1c1cXLDZCP53UGtf4mdjibRf4GzSMfysR9k0Sp48Ckc7mvcuan7mK9pK68e2ZBcmwCZBRKULz3fOvCUwRiFXxNbocygl3HxAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:37:25 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4956", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAO5XluZAIV06tihvyrGILxM6qmEQGdL7B4V6ySIZCXh05KLFBUhfjTGAbV2co0NQ89SY8Pn64BpnxLygG3LMsQOoBA6WfZCE1c1cXLDZCP53UGtf4mdjibRf4GzSMfysR9k0Sp48Ckc7mvcuan7mK9pK68e2ZBcmwCZBRKULz3fOvCUwRiFXxNbocygl3HxAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts.json?e=4936&fb_type=all&t=CAAIAFwCQcjMBAPZCr2awjTuNDDFZCaIlvYwm1cV7iyXZBiYAYyWrRqUjCBmjKZAnTECTDkuxjsauOHlosohkibNX9M8xz0QhmwFmUq8gAOPftpLAZCXm3TECEU1mn4H307rS4ac1cYGD6DkBt70jNXMWnokMpH8zlZCNlkCScOvl8rDhVdDZBPP8SDNKtSLWcolYbeZBUBMfgQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:37:45 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4936", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAPZCr2awjTuNDDFZCaIlvYwm1cV7iyXZBiYAYyWrRqUjCBmjKZAnTECTDkuxjsauOHlosohkibNX9M8xz0QhmwFmUq8gAOPftpLAZCXm3TECEU1mn4H307rS4ac1cYGD6DkBt70jNXMWnokMpH8zlZCNlkCScOvl8rDhVdDZBPP8SDNKtSLWcolYbeZBUBMfgQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (31.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+Completed 200 OK in 54ms (Views: 20.4ms | ActiveRecord: 31.2ms)
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=4934&fb_type=status&t=CAAIAFwCQcjMBALE6Y2L5RzKrubxF5zdUKyUEKOpKZATaBXKWh1sRAszipTKVFn82laQn9weiqSDfpWsW103ZA13VQsm7kPR4AVbZBt8Po5jnphM6X5LiZCoGZBI8AeRwCqiOBWynic2z47kT15JyNAXLbRRxvseZBfIvx1MZBTwKFETipw1VVOT67JWRxCCIAwgie8AwDXzigZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:38:00 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4934", "fb_type"=>"status", "t"=>"CAAIAFwCQcjMBALE6Y2L5RzKrubxF5zdUKyUEKOpKZATaBXKWh1sRAszipTKVFn82laQn9weiqSDfpWsW103ZA13VQsm7kPR4AVbZBt8Po5jnphM6X5LiZCoGZBI8AeRwCqiOBWynic2z47kT15JyNAXLbRRxvseZBfIvx1MZBTwKFETipw1VVOT67JWRxCCIAwgie8AwDXzigZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'status' LIMIT 30
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts.json?e=4920&fb_type=photo&t=CAAIAFwCQcjMBAMZCcjEQ8nswodHqBpaRh6VyXZA09qFD8Pjr4S4GdAHKqnVb7RSOwz5TqJOTEE6ZAZBwyR5wwpekyFA13ynKMVi8xb6jHuZB8plFVZBIM4LulKi3ZA06K1EOUqM3a5hBAumEbQErXsYesSRIZBrj9YhwDkxPSo00yx41cx2dB6aHZBZCI4Fzgadq4mJvMsukCPcwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:38:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4920", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAMZCcjEQ8nswodHqBpaRh6VyXZA09qFD8Pjr4S4GdAHKqnVb7RSOwz5TqJOTEE6ZAZBwyR5wwpekyFA13ynKMVi8xb6jHuZB8plFVZBIM4LulKi3ZA06K1EOUqM3a5hBAumEbQErXsYesSRIZBrj9YhwDkxPSo00yx41cx2dB6aHZBZCI4Fzgadq4mJvMsukCPcwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 1.7ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '699955798_10152332262755799' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 18:38:14 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:38:12 UTC +00:00], ["fb_id", "699955798_10152332262755799"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "699955798"], ["story", "Yumiko Krupenina commented on her own photo."], ["updated_at", Tue, 25 Mar 2014 18:38:14 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:38:12 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=4844&fb_type=all&t=CAAIAFwCQcjMBAMHJsWfieUJoam1CiBmmvC6R9raQy3e6sW6PLt51kKN1cxxh74NQ8Mrn21rjmWKET67RDBWFT0YOuCnO8HSwSFQ9bh1yYLD1zalbWiqXrMYctkZB2CUOr2HmVn3sgn6eZBSPWIIaPSSVw42p8CZBUjsfrTm7eDN5ph2Ox2gI8ZAzRNZCUk1KVIqCN4lq73AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:39:17 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4844", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMHJsWfieUJoam1CiBmmvC6R9raQy3e6sW6PLt51kKN1cxxh74NQ8Mrn21rjmWKET67RDBWFT0YOuCnO8HSwSFQ9bh1yYLD1zalbWiqXrMYctkZB2CUOr2HmVn3sgn6eZBSPWIIaPSSVw42p8CZBUjsfrTm7eDN5ph2Ox2gI8ZAzRNZCUk1KVIqCN4lq73AZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 1.4ms)
