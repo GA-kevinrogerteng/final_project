@@ -18871,3 +18871,723 @@ Processing by PostsController#index as JSON
   [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30[0m
   [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
 Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts.json?e=3907&fb_type=link&t=CAAIAFwCQcjMBAPPGVQcfohVGkynGZC4fiYQhoZBpdVX05V09OcDXlVjp4KpFmElIA4MVkXRVw6JGm2Krn7c1jR62JofPLKoKAoJsj4CukvEmeVnjZBjZBeKDOisoJtT9cMRiZBTGpab2MEoVJpNOXOTyQcCPMvYz63kqskJqPnE0gaeDnRDtcMsDvZAptjqZAdL5IRtets10wZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 09:58:05 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3907", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBAPPGVQcfohVGkynGZC4fiYQhoZBpdVX05V09OcDXlVjp4KpFmElIA4MVkXRVw6JGm2Krn7c1jR62JofPLKoKAoJsj4CukvEmeVnjZBjZBeKDOisoJtT9cMRiZBTGpab2MEoVJpNOXOTyQcCPMvYz63kqskJqPnE0gaeDnRDtcMsDvZAptjqZAdL5IRtets10wZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30
+  [1m[35mPost Load (4.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/posts.json?e=3715&fb_type=link&t=CAAIAFwCQcjMBAAdR5AvRTuhFXveWkgS7wOGHanZChKPsZCIOxJQC445xcLn4qobnqUoTHlneyZBFZAXZA4PkAZAlZA22el8nhCGqtxH7rf44F8O9ocj72z3zCnCRZBpHU8nVbZCZAZApBBQqn6LZCUDpXZCdcdElLSfhSdOFwDyvnpfGKjq71I61bEKh7Hi39mNMFfEY83ao4ktAHOwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 09:58:06 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3715", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBAAdR5AvRTuhFXveWkgS7wOGHanZChKPsZCIOxJQC445xcLn4qobnqUoTHlneyZBFZAXZA4PkAZAlZA22el8nhCGqtxH7rf44F8O9ocj72z3zCnCRZBpHU8nVbZCZAZApBBQqn6LZCUDpXZCdcdElLSfhSdOFwDyvnpfGKjq71I61bEKh7Hi39mNMFfEY83ao4ktAHOwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30[0m
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612470538514' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 16:58:07 UTC +00:00], ["created_time", Tue, 25 Mar 2014 16:55:39 UTC +00:00], ["fb_id", "18807449704_10201612470538514"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/extreme-weather-malaysia-airlines/?utm_cid=mash-com-fb-main-link"], ["message", "The search for Malaysia Airlines Flight 370 is happening in the area most difficult to search. "], ["name", "Malaysia Airlines Search Area Is the Worst Place on Earth to Lose a Plane"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCsGzudq2iz3XsD&w=154&h=154&url=http%3A%2F%2Frack.2.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzQyL01hbGF5c2lhQWlyLjE1OTEwLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw%2F36ca929c%2F754%2FMalaysiaAirlinesBadWeather.jpg"], ["updated_at", Tue, 25 Mar 2014 16:58:07 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 16:57:43 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612470538514' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 16:58:08 UTC +00:00], ["created_time", Tue, 25 Mar 2014 16:55:39 UTC +00:00], ["fb_id", "18807449704_10201612470538514"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/extreme-weather-malaysia-airlines/?utm_cid=mash-com-fb-main-link"], ["message", "The search for Malaysia Airlines Flight 370 is happening in the area most difficult to search. "], ["name", "Malaysia Airlines Search Area Is the Worst Place on Earth to Lose a Plane"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCsGzudq2iz3XsD&w=154&h=154&url=http%3A%2F%2Frack.2.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzQyL01hbGF5c2lhQWlyLjE1OTEwLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw%2F36ca929c%2F754%2FMalaysiaAirlinesBadWeather.jpg"], ["updated_at", Tue, 25 Mar 2014 16:58:08 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 16:57:43 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=3711&fb_type=link&t=CAAIAFwCQcjMBABkghPOZCgIey2GZCKZC4krMQBPs5NXl0dmgzlQHQE6uohbBz4P1S3QZCQI5nqqvHlh7LNeizT1JLBRch4wAqUFTfhveIEjsBxc7FTU8oKw5cooOHZAS6WUU09mBmJirNrZBwjzePEYq5ZCYbY1WvBf1cDrjMBuCmMKLOQgQZB2gFlJyllZCKNhVwHtPegEfwPwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 09:58:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3711", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBABkghPOZCgIey2GZCKZC4krMQBPs5NXl0dmgzlQHQE6uohbBz4P1S3QZCQI5nqqvHlh7LNeizT1JLBRch4wAqUFTfhveIEjsBxc7FTU8oKw5cooOHZAS6WUU09mBmJirNrZBwjzePEYq5ZCYbY1WvBf1cDrjMBuCmMKLOQgQZB2gFlJyllZCKNhVwHtPegEfwPwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 1.6ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612470538514' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 16:58:14 UTC +00:00], ["created_time", Tue, 25 Mar 2014 16:55:39 UTC +00:00], ["fb_id", "18807449704_10201612470538514"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/extreme-weather-malaysia-airlines/?utm_cid=mash-com-fb-main-link"], ["message", "The search for Malaysia Airlines Flight 370 is happening in the area most difficult to search. "], ["name", "Malaysia Airlines Search Area Is the Worst Place on Earth to Lose a Plane"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCsGzudq2iz3XsD&w=154&h=154&url=http%3A%2F%2Frack.2.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzQyL01hbGF5c2lhQWlyLjE1OTEwLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw%2F36ca929c%2F754%2FMalaysiaAirlinesBadWeather.jpg"], ["updated_at", Tue, 25 Mar 2014 16:58:14 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 16:57:43 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=3691&fb_type=link&t=CAAIAFwCQcjMBADAKtFCxvHIGzbhkeQgWAyOqGxZCvF9dvV6gcs9cf5hXEWAgf8Vy1KDyCmdZCesMYPfmeZB11V4Pn7QAFPvNNQMeFKuXAHOSJBYWNZC85ekc0lCQ1itcQCt2k1LtADsU6jLb4TJ5YyBGKiWBAkoQ4W0CkPqI3d2PLVmTlCZCCHeZApQBaYTHcRTPcvQQV2rgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 09:58:33 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3691", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBADAKtFCxvHIGzbhkeQgWAyOqGxZCvF9dvV6gcs9cf5hXEWAgf8Vy1KDyCmdZCesMYPfmeZB11V4Pn7QAFPvNNQMeFKuXAHOSJBYWNZC85ekc0lCQ1itcQCt2k1LtADsU6jLb4TJ5YyBGKiWBAkoQ4W0CkPqI3d2PLVmTlCZCCHeZApQBaYTHcRTPcvQQV2rgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30[0m
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 19.9ms | ActiveRecord: 1.9ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612470538514' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 16:58:35 UTC +00:00], ["created_time", Tue, 25 Mar 2014 16:55:39 UTC +00:00], ["fb_id", "18807449704_10201612470538514"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/extreme-weather-malaysia-airlines/?utm_cid=mash-com-fb-main-link"], ["message", "The search for Malaysia Airlines Flight 370 is happening in the area most difficult to search. "], ["name", "Malaysia Airlines Search Area Is the Worst Place on Earth to Lose a Plane"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCsGzudq2iz3XsD&w=154&h=154&url=http%3A%2F%2Frack.2.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzQyL01hbGF5c2lhQWlyLjE1OTEwLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw%2F36ca929c%2F754%2FMalaysiaAirlinesBadWeather.jpg"], ["updated_at", Tue, 25 Mar 2014 16:58:35 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 16:58:20 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=7082&fb_type=link&t=CAAIAFwCQcjMBAGH57tczC0NCdFqH8NRikPzkpEPY79q5ZCZA1rB3zqZCyhhx1y9K6rQ8Kn7JqyS25z8ALxOciiup6cakMZBjdaWIPmbL2P1fnxVtA5pIyNTrrXU3nQb9HNe7lKlElpxv0ZBV93T5ZCZBSgNkZCPu8XaQqZCHTHVaIXTJiFnK2fkhzfrAVrTLKYsrkpvvysOGQkwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:02:01 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"7082", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBAGH57tczC0NCdFqH8NRikPzkpEPY79q5ZCZA1rB3zqZCyhhx1y9K6rQ8Kn7JqyS25z8ALxOciiup6cakMZBjdaWIPmbL2P1fnxVtA5pIyNTrrXU3nQb9HNe7lKlElpxv0ZBV93T5ZCZBSgNkZCPu8XaQqZCHTHVaIXTJiFnK2fkhzfrAVrTLKYsrkpvvysOGQkwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 2.3ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '167461413431050_269742576536266' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category", "Community"], ["created_at", Tue, 25 Mar 2014 17:02:04 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:00:05 UTC +00:00], ["fb_id", "167461413431050_269742576536266"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "167461413431050"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/leprumus/photos/a.167463780097480.1073741826.167461413431050/269742569869600/?type=1&relevant_count=1"], ["message", "Сидел, курил. Ко мне подошел этот кот.\nБольше не курю."], ["object_id", "269742569869600"], ["picture", "https://fbcdn-photos-e-a.akamaihd.net/hphotos-ak-prn1/t1.0-0/1975202_269742569869600_206844733_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:02:04 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:00:05 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '104958162837_10152312489217838' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category", "Website"], ["created_at", Tue, 25 Mar 2014 17:02:04 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:00:01 UTC +00:00], ["fb_id", "104958162837_10152312489217838"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "104958162837"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10152310746032838&set=a.404124792837.181416.104958162837&type=1&relevant_count=1"], ["message", "With the latest update to the #GoogleSearch app for Android, Google Now will send you a notification if you’re likely to hit a traffic incident along your drive: goo.gl/idgt3y. Has Google Now ever saved you from getting stuck?"], ["object_id", "10152310746032838"], ["picture", "https://fbcdn-photos-c-a.akamaihd.net/hphotos-ak-prn2/t1.0-0/1902765_10152310746032838_1534398660_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:02:04 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:00:01 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612470538514' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 17:02:04 UTC +00:00], ["created_time", Tue, 25 Mar 2014 16:55:39 UTC +00:00], ["fb_id", "18807449704_10201612470538514"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/extreme-weather-malaysia-airlines/?utm_cid=mash-com-fb-main-link"], ["message", "The search for Malaysia Airlines Flight 370 is happening in the area most difficult to search. "], ["name", "Malaysia Airlines Search Area Is the Worst Place on Earth to Lose a Plane"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCsGzudq2iz3XsD&w=154&h=154&url=http%3A%2F%2Frack.2.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzQyL01hbGF5c2lhQWlyLjE1OTEwLmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw%2F36ca929c%2F754%2FMalaysiaAirlinesBadWeather.jpg"], ["updated_at", Tue, 25 Mar 2014 17:02:04 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 16:59:39 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=7035&fb_type=link&t=CAAIAFwCQcjMBADLKGOxOPyxoRmFEAyJsPZAJbnSjTLd4gM7BbVzDAg9TcSVM8cx9A0oTP8pG52fr57JVPZBiMxj68g2heOu4Gq52WHtJpb4CLKaFaQZCXzlqPIddwNXfwZBWBC9CSkLnQ0zPZA005KDbLiculgUkI7KYvvexZB0ZCZBXuu8SnCNEbpnVxuOEqsb9ZBP2XBsHsIgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:02:48 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"7035", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBADLKGOxOPyxoRmFEAyJsPZAJbnSjTLd4gM7BbVzDAg9TcSVM8cx9A0oTP8pG52fr57JVPZBiMxj68g2heOu4Gq52WHtJpb4CLKaFaQZCXzlqPIddwNXfwZBWBC9CSkLnQ0zPZA005KDbLiculgUkI7KYvvexZB0ZCZBXuu8SnCNEbpnVxuOEqsb9ZBP2XBsHsIgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30[0m
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts.json?e=7015&fb_type=link&t=CAAIAFwCQcjMBABsabZALp3Dp9leRZAfHnGUXtGHAlRVNivWTHwjqfhJvZBHq6xyiBUX8XQIMJEknBZC6HczZBqy5hqBuK8dzRWT1VPkboQ5GSW2aIvfjD8edNeCy2L2vZCa75KC3D0pSykVNqrilzzcO0y1PZAnndIeQBP8jLrCEeaujtQa1x1vlobGy8YZA6SEPIx2QMtoutQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:03:09 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"7015", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBABsabZALp3Dp9leRZAfHnGUXtGHAlRVNivWTHwjqfhJvZBHq6xyiBUX8XQIMJEknBZC6HczZBqy5hqBuK8dzRWT1VPkboQ5GSW2aIvfjD8edNeCy2L2vZCa75KC3D0pSykVNqrilzzcO0y1PZAnndIeQBP8jLrCEeaujtQa1x1vlobGy8YZA6SEPIx2QMtoutQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 1.9ms)
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=7011&fb_type=photo&t=CAAIAFwCQcjMBAMUDZBDjunHsVQOMAFD0CCw1IR0B80zcOdjCH1RilQF0YmVgNPcIARncUZBf9UILYvoO0IZBy6bqz3e6yb7bAwAGgW8pL5fZC5BhwHYQnOCbtxHZA2ZBPL9ENlZA2IU0LxDEZBUN6hnfxZBZAZAip5EZBnBZBC0fQm82qAnZBYFDUogx3rLyiujcpjfQMzywz8HbzdpwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:03:41 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"7011", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAMUDZBDjunHsVQOMAFD0CCw1IR0B80zcOdjCH1RilQF0YmVgNPcIARncUZBf9UILYvoO0IZBy6bqz3e6yb7bAwAGgW8pL5fZC5BhwHYQnOCbtxHZA2ZBPL9ENlZA2IU0LxDEZBUN6hnfxZBZAZAip5EZBnBZBC0fQm82qAnZBYFDUogx3rLyiujcpjfQMzywz8HbzdpwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts.json?e=6979&fb_type=video&t=CAAIAFwCQcjMBALYZC8GYYrXNRpjSHBvnZANRAKZA4HsgOxlPztkrfZA7sRKcaTPVOdbMNt2k5QLDknQhw2RI5ZC7rFApy87wZCS4EBRHXfCCFAjDGk2yO5HmPGoy59lYJEso6D4402ERnRRzjeLZBAf6Gx7fIyofUZBKwiY5N8FizaAof9vP3SuG2UCPzLThVCfWD8jKQxJrBAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:03:57 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6979", "fb_type"=>"video", "t"=>"CAAIAFwCQcjMBALYZC8GYYrXNRpjSHBvnZANRAKZA4HsgOxlPztkrfZA7sRKcaTPVOdbMNt2k5QLDknQhw2RI5ZC7rFApy87wZCS4EBRHXfCCFAjDGk2yO5HmPGoy59lYJEso6D4402ERnRRzjeLZBAf6Gx7fIyofUZBKwiY5N8FizaAof9vP3SuG2UCPzLThVCfWD8jKQxJrBAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'video' LIMIT 30
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts.json?e=6963&fb_type=link&t=CAAIAFwCQcjMBANXpuy6ZAltaR17yvAqOqi07G1HQ4iu22A3BsiPt7fouZCE8QHoEB3hQtXfxRKxcCVuFhnZCFS8iK6A0vWXk0JHbIb8oAF9y8fozOkWZCi20hj00SKwq37IMPGOM1dmbmP77lWxwXQGZBHZAdcEAAeEZBs30y57rVllbb63rA4lCUfl7a4KaLG5OEkZBvWoPyAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:11:56 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6963", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBANXpuy6ZAltaR17yvAqOqi07G1HQ4iu22A3BsiPt7fouZCE8QHoEB3hQtXfxRKxcCVuFhnZCFS8iK6A0vWXk0JHbIb8oAF9y8fozOkWZCi20hj00SKwq37IMPGOM1dmbmP77lWxwXQGZBHZAdcEAAeEZBs30y57rVllbb63rA4lCUfl7a4KaLG5OEkZBvWoPyAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30[0m
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 20.0ms | ActiveRecord: 3.1ms)
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1342157923_10203650281881230' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:11:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:09:57 UTC +00:00], ["fb_id", "1342157923_10203650281881230"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "1342157923"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "http://canal311.com/index.php/noticias/item/2153-mayas-ganan-juicio-monsanto"], ["message", "En Argentina seguimos esperando… no hay que rendirse. Cada ves mas ejemplos de pueblos hermanos."], ["name", "Comunidades mayas ganan juicio contra Monsanto"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQClsuHO1RZ3Pdkl&w=154&h=154&url=http%3A%2F%2Fcanal311.com%2Fmedia%2Fk2%2Fitems%2Fcache%2F084e87a704762fed2247732a795060ad_L.jpg"], ["updated_at", Tue, 25 Mar 2014 17:11:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:09:57 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '631649211_10152276828799731' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:11:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:07:32 UTC +00:00], ["fb_id", "631649211_10152276828799731"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "631649211"], ["story", "Shorey Myers commented on a link."], ["updated_at", Tue, 25 Mar 2014 17:11:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:07:32 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1640889252_593804050716160' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "link", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:11:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:05:02 UTC +00:00], ["fb_id", "1640889252_593804050716160"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "1640889252"], ["link", "https://www.facebook.com/events/593804050716160/"], ["story", "Hermanas Bustelo created an event."], ["updated_at", Tue, 25 Mar 2014 17:11:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:05:02 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=6222&fb_type=link&t=CAAIAFwCQcjMBAPG8BmZBZAnP2G5SfCZAkFurfkZAy54djeEJEshgBDUu4fKcj2zHyaTrtfbTETalC8Y6Nw7nZAevnCzndpnrVEUEiBJy6d2RQVcZCoTGaRhswm3Y0ZByly767zSEGrCgqmlUUtCMcIdAjs66Y5RS0bbHnMfnPd01IptXNKD1OWZB785Llf18p8X3etZATJspnIQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:16:22 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6222", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBAPG8BmZBZAnP2G5SfCZAkFurfkZAy54djeEJEshgBDUu4fKcj2zHyaTrtfbTETalC8Y6Nw7nZAevnCzndpnrVEUEiBJy6d2RQVcZCoTGaRhswm3Y0ZByly767zSEGrCgqmlUUtCMcIdAjs66Y5RS0bbHnMfnPd01IptXNKD1OWZB785Llf18p8X3etZATJspnIQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1038849873_10202466911167592' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = 173
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:16:25 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:16:21 UTC +00:00], ["fb_id", "1038849873_10202466911167592"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1038849873"], ["story", "Facundo de la Cruz commented on his own photo."], ["updated_at", Tue, 25 Mar 2014 17:16:25 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:16:21 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '655096186_10152264639241187' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:16:25 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:15:33 UTC +00:00], ["fb_id", "655096186_10152264639241187"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "655096186"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "http://www.rodalenews.com/single-serve-coffee?cm_mmc=TheDailyFixNL-_-1643846-_-03252014-_-The_Worst_Way_to_Make_Your_Coffee_text"], ["message", "I have been involved in the coffee culture for over 30 years as I have mentioned before.  I grind and brew my various coffees daily and have refused to get involved with those little containers of coffee brewed by many these days.  \n\nAnd now I received this bit of information from one of the sites I subscribe to and it easier to know that I have not given in to the so called convenience of using that stuff.\n\nhttp://www.rodalenews.com/single-serve-coffee?cm_mmc=TheDailyFixNL-_-1643846-_-03252014-_-The_Worst_Way_to_Make_Your_Coffee_text"], ["name", "Discarded K-Cups Could Circle the Earth 11 Times"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAWa2Z1GDNgttAv&w=154&h=154&url=http%3A%2F%2Fwww.rodalenews.com%2Ffiles%2Fimages%2Fcoffee_475.jpg"], ["updated_at", Tue, 25 Mar 2014 17:16:25 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:15:33 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=6217&fb_type=photo&t=CAAIAFwCQcjMBABNmZCZBFGtRNe9XQc4CoGT5ZCrBFu2u7fbqR4AlsLTsQn617N6J29JZATWprIfvoQBlXp8SFlTlsTC2AWoQDWfNbw2OyLItD3NrLoG4hGZAbEuFt4GE8jdEZAEJeeOn3hHLV6ngkaAuP6CtZC7zPx5qiymJ4OshW2J81zn5idZClrPZAZCcXaFLYH4dDBYL1gIgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:16:32 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6217", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBABNmZCZBFGtRNe9XQc4CoGT5ZCrBFu2u7fbqR4AlsLTsQn617N6J29JZATWprIfvoQBlXp8SFlTlsTC2AWoQDWfNbw2OyLItD3NrLoG4hGZAbEuFt4GE8jdEZAEJeeOn3hHLV6ngkaAuP6CtZC7zPx5qiymJ4OshW2J81zn5idZClrPZAZCcXaFLYH4dDBYL1gIgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 96ms (Views: 90.9ms | ActiveRecord: 3.3ms)
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1038849873_10202466911167592' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = 180
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:16:33 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:16:25 UTC +00:00], ["fb_id", "1038849873_10202466911167592"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1038849873"], ["story", "Facundo de la Cruz commented on his own photo."], ["updated_at", Tue, 25 Mar 2014 17:16:33 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:16:25 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=6125&fb_type=photo&t=CAAIAFwCQcjMBAD6ZBL6CouVBcxCqUh5SnXhJ2zhUBZA5XNKDLm8RPoZBpWZAA7Q8KmopARkSB9ZA7Xutaw6PSpkTP79zzB7Q2ZBNXLXWL1nZB1wrsOW6rMcx4ZAmWKWrmRdZB6B8HEo6a6k0QZAyu59LZBc8fQkIz9dxoRX3rw4ONQAZBftvCobmGDBAEoeJpRgyedeXu2OLlyglAQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:17:59 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6125", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAD6ZBL6CouVBcxCqUh5SnXhJ2zhUBZA5XNKDLm8RPoZBpWZAA7Q8KmopARkSB9ZA7Xutaw6PSpkTP79zzB7Q2ZBNXLXWL1nZB1wrsOW6rMcx4ZAmWKWrmRdZB6B8HEo6a6k0QZAyu59LZBc8fQkIz9dxoRX3rw4ONQAZBftvCobmGDBAEoeJpRgyedeXu2OLlyglAQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 1.8ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '662427292_10152044665022293' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:18:01 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:17:12 UTC +00:00], ["fb_id", "662427292_10152044665022293"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "662427292"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "http://9gag.com/gag/aZP2zgz?ref=fb.s"], ["message", "Sex, marriage and baby carriage: animal style! Fun and interesting."], ["name", "If Humans used Animal Mating Rituals"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQDyamhf9a5e7Rng&w=154&h=154&url=http%3A%2F%2Ffeatured-cdn.9gag.com%2Fimages%2Fthumbnail-facebook%2F9763715_1394503030.7246_YWYDu2_n.jpg"], ["updated_at", Tue, 25 Mar 2014 17:18:01 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:17:12 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=6098&fb_type=photo&t=CAAIAFwCQcjMBANfw0Vzwq8ZAke2br2P1s1PP19USSFDuQzOt6ZC54MhxNrr28GhDCPW3l3tupZCxdEgNUQPXlF1eJGxwcz9YHmGHq4MtrVtDcHBWRN8lzeZCuJSIAIY81OqZA47mmllSurQWKyQ1ZAJYvHAva5eo8QjThQpwD0n3UkyjTIKcSb1FTrECptOXvd9LW4nHwRVwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:18:26 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6098", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBANfw0Vzwq8ZAke2br2P1s1PP19USSFDuQzOt6ZC54MhxNrr28GhDCPW3l3tupZCxdEgNUQPXlF1eJGxwcz9YHmGHq4MtrVtDcHBWRN8lzeZCuJSIAIY81OqZA47mmllSurQWKyQ1ZAJYvHAva5eo8QjThQpwD0n3UkyjTIKcSb1FTrECptOXvd9LW4nHwRVwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 1.9ms)
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1038849873_10202466911167592' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = 181[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:18:28 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:18:19 UTC +00:00], ["fb_id", "1038849873_10202466911167592"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1038849873"], ["story", "Facundo de la Cruz commented on his own photo."], ["updated_at", Tue, 25 Mar 2014 17:18:28 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:18:19 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=6064&fb_type=photo&t=CAAIAFwCQcjMBAPcBZCUWQcjZCupQO2iMub2so2iNyXJw2npGbeACUekJIDF0TkrPJ7QhKkJQdYi9OxYw2uO6CJBZB9SZA5hZAYyEqAfbeW0XKs8dLLZBI5vyg9bGOZB0I6bJftAc1FQs81EZC03YLAtKqshOxRa1n2qrUv8jhw1GECSZCzFiVASZCACZAO3wQxgnApHmBiWdjf9ugZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:19:00 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6064", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAPcBZCUWQcjZCupQO2iMub2so2iNyXJw2npGbeACUekJIDF0TkrPJ7QhKkJQdYi9OxYw2uO6CJBZB9SZA5hZAYyEqAfbeW0XKs8dLLZBI5vyg9bGOZB0I6bJftAc1FQs81EZC03YLAtKqshOxRa1n2qrUv8jhw1GECSZCzFiVASZCACZAO3wQxgnApHmBiWdjf9ugZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 19.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/posts.json?e=6060&fb_type=photo&t=CAAIAFwCQcjMBACuzPZCfXdVV6IcidSjUqvYgNmPgj7rw94vzNPgHamcri9vZB1US3EbqdZCk4K6E4vnZAvVJRpBU3xov0LiV74BVOLRpwvOrZApvpQ4SRNbSNKlyU1t4GMQZBcNdhPnD8HfKP7JQ1BercVKedIugh9fzVDL6yzgEktAyY73V3203shFhpk51urPlxozV87JQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:22:15 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6060", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBACuzPZCfXdVV6IcidSjUqvYgNmPgj7rw94vzNPgHamcri9vZB1US3EbqdZCk4K6E4vnZAvVJRpBU3xov0LiV74BVOLRpwvOrZApvpQ4SRNbSNKlyU1t4GMQZBcNdhPnD8HfKP7JQ1BercVKedIugh9fzVDL6yzgEktAyY73V3203shFhpk51urPlxozV87JQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1038849873_10202466911167592' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = 183
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:22:18 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:19:55 UTC +00:00], ["fb_id", "1038849873_10202466911167592"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1038849873"], ["story", "Facundo de la Cruz commented on his own photo."], ["updated_at", Tue, 25 Mar 2014 17:22:18 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:19:55 UTC +00:00]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=5861&fb_type=photo&t=CAAIAFwCQcjMBAKZB3RKOfZBYJ8ZAQzfZANv2mCRzGzNZBhZBGBLjYwq4NZB3oZAZA3gZCVz4c26zeZApnSm9NlkLv4U4ZA7QIObZClCwuMXQNTAJsIzJluuPiBYB15llLv4IMWygmnLSj3f8cPm2PKMU3bBgRsIZAasa6sHrM9LXi5GQ3UJ2Ao2otTUwETAZCsZCbOBuwhs2pYi1SVUODwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:22:22 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5861", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAKZB3RKOfZBYJ8ZAQzfZANv2mCRzGzNZBhZBGBLjYwq4NZB3oZAZA3gZCVz4c26zeZApnSm9NlkLv4U4ZA7QIObZClCwuMXQNTAJsIzJluuPiBYB15llLv4IMWygmnLSj3f8cPm2PKMU3bBgRsIZAasa6sHrM9LXi5GQ3UJ2Ao2otTUwETAZCsZCbOBuwhs2pYi1SVUODwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts.json?e=5826&fb_type=photo&t=CAAIAFwCQcjMBAOxr7SKtsoz3JeWxqqnH57xZAjGpnEQX0EuBEhiOwk93KpG8I6aNHp76h0ZBouMhaINKmIiOpxGzySAv4NM7BkJFzti0RLTxDOmFuQiz73w6ipuv2GXz9VZCIDy5NkUDIyyELq0wpE8Ylp6D4e4oeyGZBiUYFzEZAmpAnQEJIxXK1YCWGTDVuNSaRkJW2ZBgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:22:58 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5826", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAOxr7SKtsoz3JeWxqqnH57xZAjGpnEQX0EuBEhiOwk93KpG8I6aNHp76h0ZBouMhaINKmIiOpxGzySAv4NM7BkJFzti0RLTxDOmFuQiz73w6ipuv2GXz9VZCIDy5NkUDIyyELq0wpE8Ylp6D4e4oeyGZBiUYFzEZAmpAnQEJIxXK1YCWGTDVuNSaRkJW2ZBgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts.json?e=5799&fb_type=photo&t=CAAIAFwCQcjMBAMGcuYZBECtIN7cQz2450EydJyVDvmvRhqEVno5ZC6iBO7u3A8y3GpLIVyClZCxxbF5MQpdt7ghpDVM5zR8NHTg4c77WhuCxhphf1ZAUaZB2BcqFljVSrEvZAuHuj7QLtJhQrLs5YbamdsHElnCFXAeFeggeMSuhaKeiiJw5xKsoe2aczyLisVbieMYZCdjkQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:23:24 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5799", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAMGcuYZBECtIN7cQz2450EydJyVDvmvRhqEVno5ZC6iBO7u3A8y3GpLIVyClZCxxbF5MQpdt7ghpDVM5zR8NHTg4c77WhuCxhphf1ZAUaZB2BcqFljVSrEvZAuHuj7QLtJhQrLs5YbamdsHElnCFXAeFeggeMSuhaKeiiJw5xKsoe2aczyLisVbieMYZCdjkQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (4.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/posts.json?e=5774&fb_type=photo&t=CAAIAFwCQcjMBABHZCecqZCKltzK13EAeZAGhdStU6RZB86ZB18QVrORBIfnRyN8fWWRZCWF7fgxOKiiaKc23DBPPr87oNjKX3cTxuuaeKvu42cZC64GMzqaOythH1IeNKyn0H9m4QsMkvRSukOfzJGehNoYh0cOpOmaGujhPMoIBTRfHqPAvkedHXWArgGR29F3dcSZA25qPxgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:23:48 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5774", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBABHZCecqZCKltzK13EAeZAGhdStU6RZB86ZB18QVrORBIfnRyN8fWWRZCWF7fgxOKiiaKc23DBPPr87oNjKX3cTxuuaeKvu42cZC64GMzqaOythH1IeNKyn0H9m4QsMkvRSukOfzJGehNoYh0cOpOmaGujhPMoIBTRfHqPAvkedHXWArgGR29F3dcSZA25qPxgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 1.8ms)
+  [1m[36mPost Load (4.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=5743&fb_type=photo&t=CAAIAFwCQcjMBAJUvUyc7UJRYHL3tjw3Bzz7VOSUWuMFPTZC2NiW6qlVhqmZAXS98V3A3AZBaD64kRluYqQehzb0Jj1VxoDuFwD3bveF922fSsaMz3YzFfTulGNFtyR0rYsCWOkU2o4pcAxBzrj9VscDetRiuSgynQ1TL4MtCVsVt7eCBh6ywJkUVqHmNMKa5DzWT7wXzgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:24:21 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5743", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAJUvUyc7UJRYHL3tjw3Bzz7VOSUWuMFPTZC2NiW6qlVhqmZAXS98V3A3AZBaD64kRluYqQehzb0Jj1VxoDuFwD3bveF922fSsaMz3YzFfTulGNFtyR0rYsCWOkU2o4pcAxBzrj9VscDetRiuSgynQ1TL4MtCVsVt7eCBh6ywJkUVqHmNMKa5DzWT7wXzgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 1.9ms)
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '8062627951_10202519094233401' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["category", "News/media website"], ["created_at", Tue, 25 Mar 2014 17:24:22 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:24:20 UTC +00:00], ["fb_id", "8062627951_10202519094233401"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "8062627951"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://trib.al/DPeR27O"], ["message", "Google has announced a number of massive price drops for virtually all of its cloud-computing services."], ["name", "Google Announces Massive Price Drops For Its Cloud Computing Services And Storage, Introduces Sustai"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCu1o3ygGPKlQPu&w=154&h=154&url=http%3A%2F%2Fi1.wp.com%2Ftctechcrunch2011.files.wordpress.com%2F2014%2F03%2Fgoogle_compute_engine_new_prices.png%3Fresize%3D680%252C680"], ["updated_at", Tue, 25 Mar 2014 17:24:22 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:24:20 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=5739&fb_type=all&t=CAAIAFwCQcjMBAGyo4iKvqZC162lHDO7gTZBiDfJIsmQiXi9MQ13dGqV4huiYiaq9L7JjPkeklmjeLuY5p9JgAt11v1np70Bo8zK0VKcYUZADVh48aNrxZCLIlZB5kZA5Dca1RqCDhvmm1ukmbNb6u8RR8hFqZA7ykZCWRhHMi5StsUjzzcY5qXY5ChWQSMyYP1tg4yIOlx5xUgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:24:48 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5739", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAGyo4iKvqZC162lHDO7gTZBiDfJIsmQiXi9MQ13dGqV4huiYiaq9L7JjPkeklmjeLuY5p9JgAt11v1np70Bo8zK0VKcYUZADVh48aNrxZCLIlZB5kZA5Dca1RqCDhvmm1ukmbNb6u8RR8hFqZA7ykZCWRhHMi5StsUjzzcY5qXY5ChWQSMyYP1tg4yIOlx5xUgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts.json?e=5589&fb_type=all&t=CAAIAFwCQcjMBAMnDzgBnKIAW6dZCR8oleKE86sv0adRNBftjYtpqHs186zZBpdEAUz4ZCCWjMhlI3dRzwkQgJ6Ve6dWgy7ilPdi4OtdZBN0ZCozgmsaef1eZB2ZAuS527BHWIsMrA24o5OsQ0QPOdadqweiTzaZBi4RPI8Ap1RWwx6ZBQmcdvqDs10gur47s9piZCADbAg3C4ZABgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:26:51 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5589", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMnDzgBnKIAW6dZCR8oleKE86sv0adRNBftjYtpqHs186zZBpdEAUz4ZCCWjMhlI3dRzwkQgJ6Ve6dWgy7ilPdi4OtdZBN0ZCozgmsaef1eZB2ZAuS527BHWIsMrA24o5OsQ0QPOdadqweiTzaZBi4RPI8Ap1RWwx6ZBQmcdvqDs10gur47s9piZCADbAg3C4ZABgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1038849873_10202466911167592' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = 184
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:26:53 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:26:42 UTC +00:00], ["fb_id", "1038849873_10202466911167592"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1038849873"], ["story", "Facundo de la Cruz commented on his own photo."], ["updated_at", Tue, 25 Mar 2014 17:26:53 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:26:42 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=5531&fb_type=all&t=CAAIAFwCQcjMBABuCOJ8OFxFJyDL8kVQZCC3o0UEqFzny6ApkQhuRevR9BWq22h4luwdeLDqTfIBKZCHhitXipWtTndvopX3wni5ckAi0VsGkqfZAyFnRls6h6uRLjyRGhd0wrqVEvCZB63pNTi3xGo3C7Q52WjfBLeqBMyZBceneGS64OipSJjidSLQiZBa7Vo6mOUwTAWuQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:27:50 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5531", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBABuCOJ8OFxFJyDL8kVQZCC3o0UEqFzny6ApkQhuRevR9BWq22h4luwdeLDqTfIBKZCHhitXipWtTndvopX3wni5ckAi0VsGkqfZAyFnRls6h6uRLjyRGhd0wrqVEvCZB63pNTi3xGo3C7Q52WjfBLeqBMyZBceneGS64OipSJjidSLQiZBa7Vo6mOUwTAWuQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 29ms (Views: 24.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts.json?e=5530&fb_type=all&t=CAAIAFwCQcjMBAPAONTUN5Cp1ksgZBq0ZCUogFUdfJZAIeTz8hWq6iXFATmy5nxMkhyQ4rAnkVzCQ0I71IT2r9O3IJ3BSparYLo1Bhk5HpZAjL1ZB1ri7ZBF9WVI1vch2CGW0ZAXl0V06yIQqqOYQzXkvtHyrZA4sLGzcrrS12NMD6zA7KDfxDkmpRvlvH3W8TYoftxadOlbjZCgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:28:21 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5530", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAPAONTUN5Cp1ksgZBq0ZCUogFUdfJZAIeTz8hWq6iXFATmy5nxMkhyQ4rAnkVzCQ0I71IT2r9O3IJ3BSparYLo1Bhk5HpZAjL1ZB1ri7ZBF9WVI1vch2CGW0ZAXl0V06yIQqqOYQzXkvtHyrZA4sLGzcrrS12NMD6zA7KDfxDkmpRvlvH3W8TYoftxadOlbjZCgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts.json?e=5497&fb_type=all&t=CAAIAFwCQcjMBAAn8BseOyVdAzZB9fqliZC6Ji2CZAqFvTOFaHCLlkHWyFrPFIMoPJbNDBGQ1MPbYZC1i31cpev41bQn5PZBPiOZCvZAzZAGJJe8O5zCfSp5lBAlRaE2HZCsV43GZBEKJUFhPzNfqqOnM0BGckZCCY6SUldCTmXr3ZA6VRC4yn4VYqNYHZCkwiqz93MC36Yw26LVaxqgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:28:24 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5497", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAAn8BseOyVdAzZB9fqliZC6Ji2CZAqFvTOFaHCLlkHWyFrPFIMoPJbNDBGQ1MPbYZC1i31cpev41bQn5PZBPiOZCvZAzZAGJJe8O5zCfSp5lBAlRaE2HZCsV43GZBEKJUFhPzNfqqOnM0BGckZCCY6SUldCTmXr3ZA6VRC4yn4VYqNYHZCkwiqz93MC36Yw26LVaxqgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts.json?e=5486&fb_type=all&t=CAAIAFwCQcjMBALU6QEbFSLOTyg0Be6pQUoEQMvEbrhKfqJa653qVnoIeYXUe6hnZBb0zevg4SpY7YdjhMMXc5VbpAbJZCOn8xAZAxL2mXo5cZC2kyZAGgrtIZCJCqmfZBZAnArslFEVMhKO2eCZAe0iH7hhxZB4UL3ieFWM6TQbYP9RWpicZB4ZBkSjRBWIyujFRo1z9ZAwzZBNWzKPgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:28:35 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5486", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBALU6QEbFSLOTyg0Be6pQUoEQMvEbrhKfqJa653qVnoIeYXUe6hnZBb0zevg4SpY7YdjhMMXc5VbpAbJZCOn8xAZAxL2mXo5cZC2kyZAGgrtIZCJCqmfZBZAnArslFEVMhKO2eCZAe0iH7hhxZB4UL3ieFWM6TQbYP9RWpicZB4ZBkSjRBWIyujFRo1z9ZAwzZBNWzKPgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 23.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts.json?e=5465&fb_type=all&t=CAAIAFwCQcjMBAMwTt12frZAuLRi4ZAKGNQBGGW1r5VMwBrGu5rRaJJiRemNuDH3oQyVLZBy4Rfn86nVVfWHo6fMsLxwlHubolwf2Gn7kgrsSlbkADcOr5IVqpnlomIk2KLEZBGJRYCEZAk64f9ZCF3ZBEkZBLJZCwlVfAC5AGLqVYBB1i4vYZBkqHy97n24cSjvqIcts2EpbQOeQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:28:56 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5465", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAMwTt12frZAuLRi4ZAKGNQBGGW1r5VMwBrGu5rRaJJiRemNuDH3oQyVLZBy4Rfn86nVVfWHo6fMsLxwlHubolwf2Gn7kgrsSlbkADcOr5IVqpnlomIk2KLEZBGJRYCEZAk64f9ZCF3ZBEkZBLJZCwlVfAC5AGLqVYBB1i4vYZBkqHy97n24cSjvqIcts2EpbQOeQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts.json?e=5439&fb_type=all&t=CAAIAFwCQcjMBAGKm3ZBYfLYDa9YZANlIKnZCsikAEA8d9PrxHdeua5bj0FRM8oKEWIzLqJXdhM3G1SPInJojvQN3RYbaqzzjxIr4dd07ZCdilc2JDYhOZAF3lKAyjcsGrGnf64jRoX2GkpXp87djUSPrFLkXRlTyV3bzk7GmXpIA7rgGcnqrFkegOl3bWPIEvZCbqfhsHuWwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:29:22 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5439", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAGKm3ZBYfLYDa9YZANlIKnZCsikAEA8d9PrxHdeua5bj0FRM8oKEWIzLqJXdhM3G1SPInJojvQN3RYbaqzzjxIr4dd07ZCdilc2JDYhOZAF3lKAyjcsGrGnf64jRoX2GkpXp87djUSPrFLkXRlTyV3bzk7GmXpIA7rgGcnqrFkegOl3bWPIEvZCbqfhsHuWwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 86ms (Views: 82.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts.json?e=5417&fb_type=all&t=CAAIAFwCQcjMBAHCV3c356DfoNpywV1JV9L2UsntjdAiWoRuHF5YeExZCIZAS0xzzim53PmDP734xwpeYHadJW1QWeicqpZAnT2hFZASCx5p4inAgPrOKTyV6xdgDwa7J5MjJecyH5fwcdJcVyK2aGuEhJ1ZB3cq7hUYCtvVYRGiS33dWduEuPbnUNrVmsuhPrqujZAsLikKAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:29:43 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5417", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAHCV3c356DfoNpywV1JV9L2UsntjdAiWoRuHF5YeExZCIZAS0xzzim53PmDP734xwpeYHadJW1QWeicqpZAnT2hFZASCx5p4inAgPrOKTyV6xdgDwa7J5MjJecyH5fwcdJcVyK2aGuEhJ1ZB3cq7hUYCtvVYRGiS33dWduEuPbnUNrVmsuhPrqujZAsLikKAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.3ms)
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '655096186_10152264658376187' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:29:46 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:29:38 UTC +00:00], ["fb_id", "655096186_10152264658376187"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "655096186"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "https://teespring.com/keepcalmlavin"], ["message", "Now that I have been formally diagnosed with ADD (duh) I could not resist buying this from a site that keeps contacting me because of my name.  The Irish Lavin material I ignored but this - irresistible  :)  I may have to get the hoodie next."], ["name", "Limited Edition - I'm a LAVIN"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQBE_v_Rs54fLRbB&w=154&h=154&url=http%3A%2F%2Fimages.teespring.com%2Fog_pic%2F577785%2Ffront.jpg%3Fv%3D2014-03-23-18-40"], ["updated_at", Tue, 25 Mar 2014 17:29:46 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:29:38 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=5351&fb_type=all&t=CAAIAFwCQcjMBAD3QfVt1iv1ZBfy5OGArg8OoXLNdI33pLTC8DnPl9ZCppNEXuEf15ijaZCGO1u6SMNO5SzFo1ii8fOJlo3i06efYGV6gl8y7t2OGEIxZA0UxtINk6J4WcHZAL2s88jaYntqwChPMOEgBAdx2NOwcZB2kgUWsLSthQ9FVO2MYsWKzHwEKrLofdH2J34VpXMAgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:30:49 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5351", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAD3QfVt1iv1ZBfy5OGArg8OoXLNdI33pLTC8DnPl9ZCppNEXuEf15ijaZCGO1u6SMNO5SzFo1ii8fOJlo3i06efYGV6gl8y7t2OGEIxZA0UxtINk6J4WcHZAL2s88jaYntqwChPMOEgBAdx2NOwcZB2kgUWsLSthQ9FVO2MYsWKzHwEKrLofdH2J34VpXMAgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts.json?e=5350&fb_type=link&t=CAAIAFwCQcjMBAG95FsNKuL3L9pjSVrCrfqK1hQeBAiELqBMmaWJ0ZC8xZAnzOpT9EyyUuII8mh8vIBq9Uh0wcmmZBa30rSMOWXUxJ1XB4ydZCNs8BwqaKOdCc0oBIV5pmW45CIfn7I0X3FnX9NXtFIRyPp4Ut1vKFPRNh5FofXApZCDNV25UBBsYoTBmZCJZA9Irk9uw23YVQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:30:55 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5350", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBAG95FsNKuL3L9pjSVrCrfqK1hQeBAiELqBMmaWJ0ZC8xZAnzOpT9EyyUuII8mh8vIBq9Uh0wcmmZBa30rSMOWXUxJ1XB4ydZCNs8BwqaKOdCc0oBIV5pmW45CIfn7I0X3FnX9NXtFIRyPp4Ut1vKFPRNh5FofXApZCDNV25UBBsYoTBmZCJZA9Irk9uw23YVQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30[0m
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts.json?e=5270&fb_type=link&t=CAAIAFwCQcjMBABduHYSnCqZA6hZAsOLbDPFZBB5thDNW2FNISSDrdMalPZBZCieIm7cvzQVSXNNJmOVBjOCLDfoavBZCdRp56cqWGE4hRL7IqbaUFXfO3wTQZBpNlZBIwiTwRYQJuU9H4q9JqvwJBdWEW6qlykmC7q3W0FyZBBMPq2oZB04Nd6KQW16YhKJGgzmPlCZAQvy1oYKYwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:32:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5270", "fb_type"=>"link", "t"=>"CAAIAFwCQcjMBABduHYSnCqZA6hZAsOLbDPFZBB5thDNW2FNISSDrdMalPZBZCieIm7cvzQVSXNNJmOVBjOCLDfoavBZCdRp56cqWGE4hRL7IqbaUFXfO3wTQZBpNlZBIwiTwRYQJuU9H4q9JqvwJBdWEW6qlykmC7q3W0FyZBBMPq2oZB04Nd6KQW16YhKJGgzmPlCZAQvy1oYKYwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' LIMIT 30
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts.json?e=5267&fb_type=link&message=kitten&t=CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:34:52 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5267", "fb_type"=>"link", "message"=>"kitten", "t"=>"CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%kitten%') LIMIT 30[0m
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '538788876_10152039458238877' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:34:53 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:32:51 UTC +00:00], ["fb_id", "538788876_10152039458238877"], ["fb_type", "video"], ["fb_uid", "560401831"], ["fb_uid_from", "538788876"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yj/r/v2OnaTyTQZE.gif"], ["link", "http://youtu.be/7fkOqXAHLKQ"], ["message", "Song of the day. Pretty groovy. Now where's the electronic milonga music?"], ["name", "Parov Stelar - Jimmy´s Gang (Official Video)"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAXcOhMF5ugK4qX&w=130&h=130&url=http%3A%2F%2Fi1.ytimg.com%2Fvi%2F7fkOqXAHLKQ%2Fmaxresdefault.jpg"], ["updated_at", Tue, 25 Mar 2014 17:34:53 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:32:51 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=5267&fb_type=link&message=kitten&t=CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:34:54 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5267", "fb_type"=>"link", "message"=>"kitten", "t"=>"CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%kitten%') LIMIT 30
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=5267&fb_type=link&message=Kitten&t=CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:34:58 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5267", "fb_type"=>"link", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%Kitten%') LIMIT 30[0m
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.0ms)
+  [1m[35mPost Load (4.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=5267&fb_type=link&message=Kitten&t=CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:34:59 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5267", "fb_type"=>"link", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%Kitten%') LIMIT 30
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 1.0ms)
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=5267&fb_type=link&message=Kitten&t=CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:01 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5267", "fb_type"=>"link", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAAshUoiZBM36eDYqx9pRKy1F1pMMMVp6FuYOERXzjrDQLefbmr8DPmHAl5gTCYkR6aA2aw4mXWOlfZA0wWbYN0TPQ5aw0TZBkhBUmHSPyg2ZBRGNgqS39d81YW7p1iUPjPOf8LxAdYqTZAEe9zUI5dYDm7U2Ur8NyZAyPtVDOGopwDA2edinLa6N6UVeFZB0AZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%Kitten%') LIMIT 30[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=5097&fb_type=link&message=Kitten&t=CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:09 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5097", "fb_type"=>"link", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%Kitten%') LIMIT 30
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 1.6ms)
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=5097&fb_type=link&message=Kitten&t=CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:11 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5097", "fb_type"=>"link", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'link' AND (message LIKE '%Kitten%') LIMIT 30[0m
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=5097&fb_type=all&message=Kitten&t=CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:14 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5097", "fb_type"=>"all", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%Kitten%') LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts.json?e=5097&fb_type=all&message=Kitten&t=CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:15 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5097", "fb_type"=>"all", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%Kitten%') LIMIT 30[0m
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 1.6ms)
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=5097&fb_type=all&message=Kitten&t=CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:16 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5097", "fb_type"=>"all", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%Kitten%') LIMIT 30
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=5097&fb_type=all&message=Kitten&t=CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:16 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5097", "fb_type"=>"all", "message"=>"Kitten", "t"=>"CAAIAFwCQcjMBAJ32ZAAq7rLZBg6BIO8EfNyVw52uAdd8LCeqHGkqT49isGO5UliNQg4dzKLezNBkTqj2sgi2OmHxF9E08eFIlI6i5325EIVAZARZAsEXJV1goB2Vym8Hy1qSlEEkDyAk5N4spoV1oDJvvWn0XOEE8uwOnfKOT9sNTw2A0TaZBgd7PMWVnGo3yiiVGjfjLCAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%Kitten%') LIMIT 30[0m
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+  [1m[35mPost Load (2.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=5082&fb_type=all&t=CAAIAFwCQcjMBAPbeCKsYOTJ5QHPoejQWvvUkOFKF1WrhX6AFpMQl1rUSr7QymdcYFoYMa6x9ZBwTBd9lBN8rCHHzB1ElOZAEdccgioTnC1JLgwNl8n6abBym3CqZB0SRVnip7WN3KbCTFF8k4qswdNJgZAdVwkOItwBZAVZBs53jZCYRdhIPszvtfcdpnya2PCLSEKKwASCDAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:21 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5082", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAPbeCKsYOTJ5QHPoejQWvvUkOFKF1WrhX6AFpMQl1rUSr7QymdcYFoYMa6x9ZBwTBd9lBN8rCHHzB1ElOZAEdccgioTnC1JLgwNl8n6abBym3CqZB0SRVnip7WN3KbCTFF8k4qswdNJgZAdVwkOItwBZAVZBs53jZCYRdhIPszvtfcdpnya2PCLSEKKwASCDAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts.json?e=5079&fb_type=all&message=tango&t=CAAIAFwCQcjMBAKz20s8N5Dge6hbP54e0UBI9llGoQj3iaxnskDfHZAGyjyHffRxqBKUZBL61MP96ukMTMoQ8OopxNH0VT2vDqN04W7sXypShdKwp8dZA2xyKjxYUFZBZAYcCjwd31XLQBb9DI3o8M3U0XUNd8Ck9sjRGvoYzGZBJ5Ou7KHNhpZCwAhnEu82zYQFSLiGR7fPngZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:35:28 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"5079", "fb_type"=>"all", "message"=>"tango", "t"=>"CAAIAFwCQcjMBAKz20s8N5Dge6hbP54e0UBI9llGoQj3iaxnskDfHZAGyjyHffRxqBKUZBL61MP96ukMTMoQ8OopxNH0VT2vDqN04W7sXypShdKwp8dZA2xyKjxYUFZBZAYcCjwd31XLQBb9DI3o8M3U0XUNd8Ck9sjRGvoYzGZBJ5Ou7KHNhpZCwAhnEu82zYQFSLiGR7fPngZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%tango%') LIMIT 30[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts.json?e=4891&fb_type=photo&t=CAAIAFwCQcjMBAB0mMs78wokZB1AXnYQunjJDfkjkcZC6tX0wgznQaeQ6bgi1yixG1YXFsjGYpJFCFHRSQPQfNEK9buqvZBZCr7bXKqzx2ZBYL98Aw6UWrjHuQYZCNpCq6BEq0NCKCpLsZBeUWEeRKOYfQ24ougZBc7dm04baC9XjJ80RKlB5Rw86sZB6E3vo06y9LMCyg7ApEkwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:38:31 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4891", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAB0mMs78wokZB1AXnYQunjJDfkjkcZC6tX0wgznQaeQ6bgi1yixG1YXFsjGYpJFCFHRSQPQfNEK9buqvZBZCr7bXKqzx2ZBYL98Aw6UWrjHuQYZCNpCq6BEq0NCKCpLsZBeUWEeRKOYfQ24ougZBc7dm04baC9XjJ80RKlB5Rw86sZB6E3vo06y9LMCyg7ApEkwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 2.9ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '155081244544398_721789284540255' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["category", "Tv show"], ["created_at", Tue, 25 Mar 2014 17:38:33 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:37:42 UTC +00:00], ["fb_id", "155081244544398_721789284540255"], ["fb_type", "video"], ["fb_uid", "560401831"], ["fb_uid_from", "155081244544398"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/DggDhA4z4tO.gif"], ["link", "https://www.facebook.com/photo.php?v=721789284540255"], ["message", "Muhteşem Yüzyıl - Şehzadelerin Savaşı başlıyor!"], ["name", "Muhteşem Yüzyıl - Şehzadelerin Savaşı"], ["object_id", "721789284540255"], ["picture", "https://fbcdn-vthumb-a.akamaihd.net/hvthumb-ak-frc3/t15.0-10/1500709_721796387872878_721789284540255_65485_375_b.jpg"], ["updated_at", Tue, 25 Mar 2014 17:38:33 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:38:31 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=4868&fb_type=photo&t=CAAIAFwCQcjMBAJhIkgKkEpA1qPiMCP6D4LZCBxDh1kNk37SZBDJZALrKaqwppt8OVKKqZC1QlXha8ccpN7HFZB3Rgy28OWxaJlRtAcroImA8SvZCMowzgPsRar1mBudv0BmlAZACS9ZB3OcoEJBxaUIz7yYXEYPCSTgYYM9wZBBL4YoXjrS90yq6LTP2OpPOkWsyLQGx8gTqAmgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:38:54 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4868", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAJhIkgKkEpA1qPiMCP6D4LZCBxDh1kNk37SZBDJZALrKaqwppt8OVKKqZC1QlXha8ccpN7HFZB3Rgy28OWxaJlRtAcroImA8SvZCMowzgPsRar1mBudv0BmlAZACS9ZB3OcoEJBxaUIz7yYXEYPCSTgYYM9wZBBL4YoXjrS90yq6LTP2OpPOkWsyLQGx8gTqAmgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts.json?e=4823&fb_type=photo&t=CAAIAFwCQcjMBADOXilhFs458aRIOa7mC7OUZCmx5HM80hVoCvJ03M012BoxrxMK9Pn2FdsImzAUVx4bVHdpjIfKU4S6AhVxgF2Q8Ehf3fuW6vTekDEFlZB8GGYV8uivol4D6eUbT4CW4IbLvfUcdnH5c2cZApDUptpVQoIpMavWx2L15F2TNPWgVnAeMYvjOCgITOb9OAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:39:40 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4823", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBADOXilhFs458aRIOa7mC7OUZCmx5HM80hVoCvJ03M012BoxrxMK9Pn2FdsImzAUVx4bVHdpjIfKU4S6AhVxgF2Q8Ehf3fuW6vTekDEFlZB8GGYV8uivol4D6eUbT4CW4IbLvfUcdnH5c2cZApDUptpVQoIpMavWx2L15F2TNPWgVnAeMYvjOCgITOb9OAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts.json?e=4820&fb_type=photo&message=Eataly&t=CAAIAFwCQcjMBAIXVEo2mPJHj97ZBvZBpDbYCTC8gGKcXzpbcw7Ccgj1LdGV5y39HPbZCceGWdhnkRw7AuWPAbPRf6I3zqvXKMNfzFnzkI97a9GS1yUsYmGEZCOiZBF3N36rLnzSRbDD5ayZBZCZBbPZAZCim21Bzxm5LlFTeuA8sZCOk9vyYeoi05fcyWi7gtHxLO8HQSvrdOTawAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:41:35 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4820", "fb_type"=>"photo", "message"=>"Eataly", "t"=>"CAAIAFwCQcjMBAIXVEo2mPJHj97ZBvZBpDbYCTC8gGKcXzpbcw7Ccgj1LdGV5y39HPbZCceGWdhnkRw7AuWPAbPRf6I3zqvXKMNfzFnzkI97a9GS1yUsYmGEZCOiZBF3N36rLnzSRbDD5ayZBZCZBbPZAZCim21Bzxm5LlFTeuA8sZCOk9vyYeoi05fcyWi7gtHxLO8HQSvrdOTawAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' AND (message LIKE '%Eataly%') LIMIT 30[0m
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+  [1m[35mPost Load (4.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '100002508161432_602309986529268' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "name", "object_id", "picture", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:41:37 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:41:31 UTC +00:00], ["fb_id", "100002508161432_602309986529268"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "100002508161432"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yD/r/aS8ecmYRys0.gif"], ["link", "https://www.facebook.com/photo.php?fbid=693916913964255&set=a.446377465384869.93863.446375565385059&type=1"], ["name", "Timeline Photos"], ["object_id", "693916913964255"], ["picture", "https://fbcdn-photos-d-a.akamaihd.net/hphotos-ak-prn1/t1.0-0/1966673_693916913964255_1617596276_s.jpg"], ["story", "Natasha Volodina shared Психушка's photo."], ["updated_at", Tue, 25 Mar 2014 17:41:37 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:41:31 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=4705&fb_type=all&message=&t=CAAIAFwCQcjMBAFYe9MCvmroEUDqJ7FRoQJX2ZAoWXZBykocBPOTC413JOvdSbsZBhZCcWI2m03waCfZBGMPuGJd2QLYie6ZBMY51L7C0rCISQYhl2LKBTfsuwo5Sp8XlqyfaspZBaIFLNWgE0Y7gB0FUe54Bqi684ma7vDomNEs3SasLzpl6ZBrc5Bavh81Etx7s0UZCSoTPKbgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:41:43 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4705", "fb_type"=>"all", "message"=>"", "t"=>"CAAIAFwCQcjMBAFYe9MCvmroEUDqJ7FRoQJX2ZAoWXZBykocBPOTC413JOvdSbsZBhZCcWI2m03waCfZBGMPuGJd2QLYie6ZBMY51L7C0rCISQYhl2LKBTfsuwo5Sp8XlqyfaspZBaIFLNWgE0Y7gB0FUe54Bqi684ma7vDomNEs3SasLzpl6ZBrc5Bavh81Etx7s0UZCSoTPKbgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND (message LIKE '%%') LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 98ms (Views: 93.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts.json?e=4570&fb_type=all&t=CAAIAFwCQcjMBALvVsCWy4X9DeM70CZBdON0YqV4oYFxtPUeWBDT7w64kZCbsOZCHYBCTvB4IDw3zs8W2WqJxAH8wuJ70d5QrGE1ZB4dWjLZBWmknzku4FOznhdwZB9bZCZB3e7i9n68xZAjZAzZCweKH0Vo2MLnkh9TaWupMrusFbIKRmIsjLZBKSSpmvfmZCd8ZANxJH512AaZA9gnkAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:44:00 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4570", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBALvVsCWy4X9DeM70CZBdON0YqV4oYFxtPUeWBDT7w64kZCbsOZCHYBCTvB4IDw3zs8W2WqJxAH8wuJ70d5QrGE1ZB4dWjLZBWmknzku4FOznhdwZB9bZCZB3e7i9n68xZAjZAzZCweKH0Vo2MLnkh9TaWupMrusFbIKRmIsjLZBKSSpmvfmZCd8ZANxJH512AaZA9gnkAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 2.3ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '699955798_10152332256025799' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:44:02 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:43:43 UTC +00:00], ["fb_id", "699955798_10152332256025799"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "699955798"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10152332255075799&set=a.426831805798.217170.699955798&type=1&relevant_count=1"], ["message", "Time really flies. This is my last week in BsAs. Memorable stories here and there. I have been really blessed during this trip. Familiar faces welcomed me back, rekindled a friendship from time long past, and trained by wonderful teachers, and danced more than ever before. \n\nAt a milonga the other night, someone liked my hair pin (my red lucky totem) so much that I ended up gifting it to her. Though I can't leave my heart in BsAs, this way, a little piece of me will always stay here. So I think:-) \n\nWhat a life:-) Thank you for everything."], ["object_id", "10152332255075799"], ["picture", "https://fbcdn-photos-d-a.akamaihd.net/hphotos-ak-prn1/t1.0-0/1622724_10152332255075799_1417629047_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:44:02 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:43:43 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=4544&fb_type=all&t=CAAIAFwCQcjMBAIPneZAS3o15ne4KTXb6exNIWIw8ioYRJRsskCsLFMzbYYF27ZAjxKZC44Gsz30324R7Vk9H9KN1YwabEhtmIopAlR3sE2blGeYGO4IcE2EgMl71Xd5Isn84QXBeDmhw0Oz1qK8pYUq27GZAZA8ZCzqicqTA8YCs3v6MgU61iMVZBsya4gZAo7osEZCoxPQmgqQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:44:17 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4544", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAIPneZAS3o15ne4KTXb6exNIWIw8ioYRJRsskCsLFMzbYYF27ZAjxKZC44Gsz30324R7Vk9H9KN1YwabEhtmIopAlR3sE2blGeYGO4IcE2EgMl71Xd5Isn84QXBeDmhw0Oz1qK8pYUq27GZAZA8ZCzqicqTA8YCs3v6MgU61iMVZBsya4gZAo7osEZCoxPQmgqQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 2.4ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '699955798_10152332256025799' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:44:20 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:43:43 UTC +00:00], ["fb_id", "699955798_10152332256025799"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "699955798"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10152332255075799&set=a.426831805798.217170.699955798&type=1&relevant_count=1"], ["message", "Time really flies. This is my last week in BsAs. Memorable stories here and there. I have been really blessed during this trip. Familiar faces welcomed me back, rekindled a friendship from time long past, and trained by wonderful teachers, and danced more than ever before. \n\nAt a milonga the other night, someone liked my hair pin (my red lucky totem) so much that I ended up gifting it to her. Though I can't leave my heart in BsAs, this way, a little piece of me will always stay here. So I think:-) \n\nWhat a life:-) Thank you for everything."], ["object_id", "10152332255075799"], ["picture", "https://fbcdn-photos-d-a.akamaihd.net/hphotos-ak-prn1/t1.0-0/1622724_10152332255075799_1417629047_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:44:20 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:43:43 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=4502&fb_type=all&t=CAAIAFwCQcjMBACJL9NLAjzcFhJZC9i7UR0p8i2YqOgRpVvaKhxe62PYvSqiUfNfIlKbFQOly1PuC7tOxZBYzhpL6ozHaS0NtR1ZAORZATQzAr1cuA6hhzu8SjfrrFkWv9ZCszvCbtM3nMRJ1JhV3LZCMjTDh5daStAiukR0nrEwUtE8qoMS6CIYl3U1M5tgZAEy4ZCUOdADeXQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:44:59 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4502", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBACJL9NLAjzcFhJZC9i7UR0p8i2YqOgRpVvaKhxe62PYvSqiUfNfIlKbFQOly1PuC7tOxZBYzhpL6ozHaS0NtR1ZAORZATQzAr1cuA6hhzu8SjfrrFkWv9ZCszvCbtM3nMRJ1JhV3LZCMjTDh5daStAiukR0nrEwUtE8qoMS6CIYl3U1M5tgZAEy4ZCUOdADeXQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (2.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts.json?e=4480&fb_type=photo&t=CAAIAFwCQcjMBAHeyLWvgfhM67OtuL9oTZB80ZAg7eUoa8AYxoIlMDXJaIY03ZBxxE6IT8afea7pZB9EaDW8gZAOtyHIZCg8Wax0llfaXNbOUovGOXILWb2NLNYzeBy32usZBa4zRC28Jopwik01t8L4X8kZAZAJ3ZBeagXHGJ9BzSHZARVIZACxUvZAzPNPNBAiaV4oA2G02YfVTRLQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:45:23 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4480", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAHeyLWvgfhM67OtuL9oTZB80ZAg7eUoa8AYxoIlMDXJaIY03ZBxxE6IT8afea7pZB9EaDW8gZAOtyHIZCg8Wax0llfaXNbOUovGOXILWb2NLNYzeBy32usZBa4zRC28Jopwik01t8L4X8kZAZAJ3ZBeagXHGJ9BzSHZARVIZACxUvZAzPNPNBAiaV4oA2G02YfVTRLQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 2.1ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '18807449704_10201612489658992' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "posts" ("category", "created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"  [["category", "Media/news/publishing"], ["created_at", Tue, 25 Mar 2014 17:45:26 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:45:00 UTC +00:00], ["fb_id", "18807449704_10201612489658992"], ["fb_type", "link"], ["fb_uid", "560401831"], ["fb_uid_from", "18807449704"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/SC2ZmEkfI-X.png"], ["link", "http://mashable.com/2014/03/25/spotify-premium-student-discount/?utm_cid=mash-com-fb-main-link"], ["message", "Spotify has some good news for college students. "], ["name", "Spotify Slashes Subscription Prices for College Students"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQA6Aeri2qqLQxfj&w=154&h=154&url=http%3A%2F%2Frack.1.mshcdn.com%2Fmedia%2FZgkyMDE0LzAzLzI1LzFmL2FyY3RpY21vbmtlLmU1NmI2LmpwZwpwCXRodW1iCTEyMDB4NjI3IwplCWpwZw%2Fe628a393%2Fdfa%2Farctic-monkeys.jpg"], ["updated_at", Tue, 25 Mar 2014 17:45:26 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:45:21 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=4447&fb_type=all&t=CAAIAFwCQcjMBAL5YM1lucgG8i2z8j09eXxmChoZASa91da1CrcamOvcXvel86QzCAQwlofTmwFDMzY6ZCLVRKr7GXZAbZCZChT5hyL3DoGxij498EZCCq9IOJDMVgivIlIcj8KzAQB6ZAWzGNoPcjaennyqZAy7SpaIyRINvAYGxMOwSy2EQ3byWZCdqAqVg3j01ZAfHTct3BLSAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:45:56 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4447", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAL5YM1lucgG8i2z8j09eXxmChoZASa91da1CrcamOvcXvel86QzCAQwlofTmwFDMzY6ZCLVRKr7GXZAbZCZChT5hyL3DoGxij498EZCCq9IOJDMVgivIlIcj8KzAQB6ZAWzGNoPcjaennyqZAy7SpaIyRINvAYGxMOwSy2EQ3byWZCdqAqVg3j01ZAfHTct3BLSAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (2.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 2.4ms)
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1475569419_10152264639241187' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:45:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:45:45 UTC +00:00], ["fb_id", "1475569419_10152264639241187"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "1475569419"], ["story", "Mike Shirobokov and Donald Lavin commented on a link."], ["updated_at", Tue, 25 Mar 2014 17:45:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:45:45 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=4409&fb_type=photo&t=CAAIAFwCQcjMBANoAA0V0TSccWr1BsFCCorguOCku42LnMt2hLKjNcuYNZBpzK1IHiQePsX810WPTneOcLnDpwEtDhCCYEToDy8r9FceoVxvDyuQOXP91QdIgUpJXbP0ZB2J3TvcgZC82MiongjaiQAXO67YgeWGJnD3dXX8PkwkZB4lz1mwgEvi6fejQx5LmFAozbZANrxwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:46:35 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4409", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBANoAA0V0TSccWr1BsFCCorguOCku42LnMt2hLKjNcuYNZBpzK1IHiQePsX810WPTneOcLnDpwEtDhCCYEToDy8r9FceoVxvDyuQOXP91QdIgUpJXbP0ZB2J3TvcgZC82MiongjaiQAXO67YgeWGJnD3dXX8PkwkZB4lz1mwgEvi6fejQx5LmFAozbZANrxwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts.json?e=4368&fb_type=all&t=CAAIAFwCQcjMBANevxC25qJ5dIt65cFNZCc2PCAiQZCjHZBhOANWGua5uZCtgcXE6XIZB1RI98YVERUYpZAZCXQ3SUqqRx4srjmkqNZANdPbSZBcsGei1ORZAXYraMBKLXtJ428EDamBN3fSwQjjrCC7AbneLWVh8iRu8znHiYZAuXYAy2ZBWLsa3VMzQGY47lxPlgP6ZAMipNjPnbOwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:47:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4368", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBANevxC25qJ5dIt65cFNZCc2PCAiQZCjHZBhOANWGua5uZCtgcXE6XIZB1RI98YVERUYpZAZCXQ3SUqqRx4srjmkqNZANdPbSZBcsGei1ORZAXYraMBKLXtJ428EDamBN3fSwQjjrCC7AbneLWVh8iRu8znHiYZAuXYAy2ZBWLsa3VMzQGY47lxPlgP6ZAMipNjPnbOwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts.json?e=4321&fb_type=all&t=CAAIAFwCQcjMBAERTJL0ZBkspLlU61c5m7lFHBe8nI0wZBPJVgpGTvQQoMxpVWRks9J8ibFS0bIUCpuZC0XCfoUNDcw0Y11spoG6865Q7FZAZANGURUgCuyBJ57G9ayNqQ35rr6tTyzM4wUAEvVbFqQLGqGspozuwJmuKIjqoS3pZBumVFGIPTG5IpYni2slwDIOb9D8sM6DAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:48:00 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4321", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAERTJL0ZBkspLlU61c5m7lFHBe8nI0wZBPJVgpGTvQQoMxpVWRks9J8ibFS0bIUCpuZC0XCfoUNDcw0Y11spoG6865Q7FZAZANGURUgCuyBJ57G9ayNqQ35rr6tTyzM4wUAEvVbFqQLGqGspozuwJmuKIjqoS3pZBumVFGIPTG5IpYni2slwDIOb9D8sM6DAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts.json?e=4295&fb_type=all&t=CAAIAFwCQcjMBANx3USSWiJmN8kaKAZBwX9xhVMHHvDZAdpY3zEEoZAu1V5Ge0YV9qMd6ojduNepF2nqUoO1Q4T10DWGkt2cyx1luRSJrtyx5nbgUvk8ZBJXmOIdkf3qVkp1uPAKpvKGfZChcWTM7cl9aLb1NcbPGtHRUeEIAZBKcus5Io1VUzYzlBB0VHUfQAbdQZAzrEYEZCgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:48:25 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4295", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBANx3USSWiJmN8kaKAZBwX9xhVMHHvDZAdpY3zEEoZAu1V5Ge0YV9qMd6ojduNepF2nqUoO1Q4T10DWGkt2cyx1luRSJrtyx5nbgUvk8ZBJXmOIdkf3qVkp1uPAKpvKGfZChcWTM7cl9aLb1NcbPGtHRUeEIAZBKcus5Io1VUzYzlBB0VHUfQAbdQZAzrEYEZCgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 1.5ms)
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=4218&fb_type=all&t=CAAIAFwCQcjMBAJ04SEATDPZBc2q0NiT47ZCQF88xZBWnW3GYZAmdfApA22zQ6A4fjspYDS7aQFNZBpjTxPq09bRHPMg6eVCGI15yoe36ZAOToSffHSv9Mm6P9henfTZAZA39VcDrZC6895ZCt2iYMBM64RcSvRuBuMeEbLqXuuxlYKstTEMOyMNYVJZA2USjYsqTcwfwDNzpj0mKAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:49:43 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4218", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAJ04SEATDPZBc2q0NiT47ZCQF88xZBWnW3GYZAmdfApA22zQ6A4fjspYDS7aQFNZBpjTxPq09bRHPMg6eVCGI15yoe36ZAOToSffHSv9Mm6P9henfTZAZA39VcDrZC6895ZCt2iYMBM64RcSvRuBuMeEbLqXuuxlYKstTEMOyMNYVJZA2USjYsqTcwfwDNzpj0mKAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 1.5ms)
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '699955798_10152332263130799' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:49:44 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:49:13 UTC +00:00], ["fb_id", "699955798_10152332263130799"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "699955798"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10152332262755799&set=a.426831805798.217170.699955798&type=1&relevant_count=1"], ["message", "Time really flies. This is my last week in BsAs. Memorable stories here and there. I have been really blessed during this trip. Familiar faces welcomed me back, rekindled a friendship from time long past, and trained by wonderful teachers, and danced more than ever before. \n\nAt a milonga the other night, someone liked my hair pin (my red lucky totem) so much that I ended up gifting it to her. Though I can't leave my heart in BsAs, this way, a little piece of me will always stay here. So I think:-) \n\nWhat a life:-) Thank you for everything."], ["object_id", "10152332262755799"], ["picture", "https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-frc3/t1.0-0/1150828_10152332262755799_504744407_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:49:44 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:49:13 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=4217&fb_type=photo&t=CAAIAFwCQcjMBAF3EvslQxMw9afnll42fnWEh03tLJjl7hn5WQILzRHe5qZCIcITP0BuasnZAMovvtdv64UJVXo53oLcuItOI95r2LGJgedwUqdmYlR141qohXsUTUl4AZC1Ri0QZCZCSbJRJSeAkQ2TGBfQWPiaK24feABYFZB0EocZChZBHMR3wZAJixlSGXBblDqWwZB3yIfZBwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:50:25 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4217", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAF3EvslQxMw9afnll42fnWEh03tLJjl7hn5WQILzRHe5qZCIcITP0BuasnZAMovvtdv64UJVXo53oLcuItOI95r2LGJgedwUqdmYlR141qohXsUTUl4AZC1Ri0QZCZCSbJRJSeAkQ2TGBfQWPiaK24feABYFZB0EocZChZBHMR3wZAJixlSGXBblDqWwZB3yIfZBwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'photo' LIMIT 30[0m
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 90ms (Views: 86.1ms | ActiveRecord: 2.1ms)
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '699955798_10152332263130799' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 17:50:26 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:49:13 UTC +00:00], ["fb_id", "699955798_10152332263130799"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "699955798"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10152332262755799&set=a.426831805798.217170.699955798&type=1&relevant_count=1"], ["message", "Time really flies. This is my last week in BsAs. Memorable stories here and there. I have been really blessed during this trip. Familiar faces welcomed me back, rekindled a friendship from time long past, and trained by wonderful teachers, and danced more than ever before. \n\nAt a milonga the other night, someone liked my hair pin (my red lucky totem) so much that I ended up gifting it to her. Though I can't leave my heart in BsAs, this way, a little piece of me will always stay here. So I think:-) \n\nWhat a life:-) Thank you for everything."], ["object_id", "10152332262755799"], ["picture", "https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-frc3/t1.0-0/1150828_10152332262755799_504744407_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:50:26 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:49:13 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/posts.json?e=3814&fb_type=all&t=CAAIAFwCQcjMBAIOlZCoYB7mf72rSr6N8VMV3byQN4qZAeTOlXvRqgv8ZBgc0cfWWc4aLGbJakykufi5Fc0dujHYVzzpRwHBLbxYacFh36b7QzdZAjZBX96Ek86yePCXAYhvNjdw14xwtoS5b4Ecof7EgWc5qMDnl7iTkFjyTY9Lg0MZBi9mdVUZC3yAvw4mpG5BX5xjP2UHJAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:56:31 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3814", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAIOlZCoYB7mf72rSr6N8VMV3byQN4qZAeTOlXvRqgv8ZBgc0cfWWc4aLGbJakykufi5Fc0dujHYVzzpRwHBLbxYacFh36b7QzdZAjZBX96Ek86yePCXAYhvNjdw14xwtoS5b4Ecof7EgWc5qMDnl7iTkFjyTY9Lg0MZBi9mdVUZC3yAvw4mpG5BX5xjP2UHJAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.3ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '767394499_10202466911167592' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:56:33 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:55:16 UTC +00:00], ["fb_id", "767394499_10202466911167592"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "767394499"], ["story", "Ray Barbosa and Facundo de la Cruz commented on a photo."], ["updated_at", Tue, 25 Mar 2014 17:56:33 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:55:16 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '699955798_10152332263130799' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 17:56:33 UTC +00:00], ["created_time", Tue, 25 Mar 2014 17:49:13 UTC +00:00], ["fb_id", "699955798_10152332263130799"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "699955798"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10152332262755799&set=a.426831805798.217170.699955798&type=1&relevant_count=1"], ["message", "Time really flies. This is my last week in BsAs. Memorable stories here and there. I have been really blessed during this trip. Familiar faces welcomed me back, rekindled a friendship from time long past, trained by wonderful teachers, and danced more than ever before. \n\nAt a milonga the other night, someone liked my hair pin (my red lucky totem) so much that I ended up gifting it to her. Though I can't leave my heart in BsAs, this way, a little piece of me will always stay here. So I think:-) \n\nWhat a life:-) Thank you for everything."], ["object_id", "10152332262755799"], ["picture", "https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-frc3/t1.0-0/1150828_10152332262755799_504744407_s.jpg"], ["updated_at", Tue, 25 Mar 2014 17:56:33 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 17:49:13 UTC +00:00]]
+PG::StringDataRightTruncation: ERROR:  value too long for type character varying(255)
+: INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/posts.json?e=3809&t=CAAIAFwCQcjMBAAia9jhin6gWzi83XuqmZCZBw1lfVGeOlZCFH4M3ZCJZCJBpFQsnHUjkK8eKyjiMIxZCE7LkajioucyqFZCw7GxUlha96X2sAIZBM42kFswum2eAAUDBX6qbioDiJkoebDlSHf8s4JLZBaZArF0ZBWq7VDSMKeqUzuq8TOftUQATlw2bqYHMiPhxyFhJWBzZCapIPwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:57:13 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3809", "t"=>"CAAIAFwCQcjMBAAia9jhin6gWzi83XuqmZCZBw1lfVGeOlZCFH4M3ZCJZCJBpFQsnHUjkK8eKyjiMIxZCE7LkajioucyqFZCw7GxUlha96X2sAIZBM42kFswum2eAAUDBX6qbioDiJkoebDlSHf8s4JLZBaZArF0ZBWq7VDSMKeqUzuq8TOftUQATlw2bqYHMiPhxyFhJWBzZCapIPwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (4.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts.json?e=3753&t=CAAIAFwCQcjMBABcZAc2tfZACZBTyqqJnkhY6dZC8FtcZB5vp4DTbyQFTrN6lKtIagbFctAH7ZAUkyjPolmqpajsJjzIZCjqpuCjSCLAqoFahQU6LSULDHFZBxSaZAbqsESSGueIeZAU9gAs4H4ploHU1nU0Ik0ENBE08rf7sKjoK2QqcFEZCHZA4PxZAF8rKzimH3wKjKDpF6TFstXQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:57:27 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3753", "t"=>"CAAIAFwCQcjMBABcZAc2tfZACZBTyqqJnkhY6dZC8FtcZB5vp4DTbyQFTrN6lKtIagbFctAH7ZAUkyjPolmqpajsJjzIZCjqpuCjSCLAqoFahQU6LSULDHFZBxSaZAbqsESSGueIeZAU9gAs4H4ploHU1nU0Ik0ENBE08rf7sKjoK2QqcFEZCHZA4PxZAF8rKzimH3wKjKDpF6TFstXQZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts.json?e=3738&fb_type=status&t=CAAIAFwCQcjMBAFxcISZA4c7clUj5MazxTk2pJjjp5qsVvXabPUZCb6LZByJLNZAkaMpzlwowwDw5i78YdrKevJgrX4yD44E3vz6SO62JEyvlhIVxSWEno1IoFcYkyJqeOmxtBuCMZAgdF1Kg5QTBOxfH2FrOZANPg8IXwJ3sMKKYv6n2lL21T4gU64pfBcB5ZBZC19ptbZBhkiAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 10:58:05 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3738", "fb_type"=>"status", "t"=>"CAAIAFwCQcjMBAFxcISZA4c7clUj5MazxTk2pJjjp5qsVvXabPUZCb6LZByJLNZAkaMpzlwowwDw5i78YdrKevJgrX4yD44E3vz6SO62JEyvlhIVxSWEno1IoFcYkyJqeOmxtBuCMZAgdF1Kg5QTBOxfH2FrOZANPg8IXwJ3sMKKYv6n2lL21T4gU64pfBcB5ZBZC19ptbZBhkiAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_type" = 'status' LIMIT 30[0m
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 24ms (Views: 19.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts.json?e=7026&fb_type=all&t=CAAIAFwCQcjMBAKgHQHNovOLEXZAEQ4V6lLsp1Y5ZBimBfxWVfecDafSo9tgf5ScKp68kfykDT3mvYTrht3gN7COi0BgtXCR6ooFnF2lHKnOZBIutbUoycZAGI9DZAFQiZBhzzI7ZAJIFfcG7a9nz7ICZBwkH9g5W13l0UtrOZBRfcYmnAH3ZC8OKdquZB83hhgth6zVOXp6KFe3vgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:02:55 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"7026", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAKgHQHNovOLEXZAEQ4V6lLsp1Y5ZBimBfxWVfecDafSo9tgf5ScKp68kfykDT3mvYTrht3gN7COi0BgtXCR6ooFnF2lHKnOZBIutbUoycZAGI9DZAFQiZBhzzI7ZAJIFfcG7a9nz7ICZBwkH9g5W13l0UtrOZBRfcYmnAH3ZC8OKdquZB83hhgth6zVOXp6KFe3vgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 1.8ms)
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '100002463756425_614906881934765' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "object_id", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 18:02:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:02:42 UTC +00:00], ["fb_id", "100002463756425_614906881934765"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "100002463756425"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yx/r/og8V99JVf8G.gif"], ["link", "https://www.facebook.com/photo.php?fbid=614905658601554&set=a.314844441941012.71098.100002463756425&type=1&relevant_count=1"], ["message", "Jueves 27 de Marzo/ clase de tecnica para ambos roles con  Cecilia Garcia+Dana Frigoli. Te esperamos!"], ["object_id", "614905658601554"], ["picture", "https://fbcdn-photos-e-a.akamaihd.net/hphotos-ak-prn1/t1.0-0/1926860_614905658601554_942164601_s.jpg"], ["updated_at", Tue, 25 Mar 2014 18:02:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:02:42 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1557050359_10203154721259687' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "object_id", "picture", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 18:02:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:02:19 UTC +00:00], ["fb_id", "1557050359_10203154721259687"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "1557050359"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=678442758858011&set=at.678442212191399.1073742134.100000768784165.1557050359&type=1&relevant_count=1"], ["object_id", "678442758858011"], ["picture", "https://fbcdn-photos-g-a.akamaihd.net/hphotos-ak-ash3/t1.0-0/1948113_678442758858011_1372499645_s.jpg"], ["story", "Pablo Rebecchi was tagged in Pasiòn Por El Tango's photo."], ["updated_at", Tue, 25 Mar 2014 18:02:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:02:19 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '532542406_10151955422392407' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"  [["created_at", Tue, 25 Mar 2014 18:02:58 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:02:18 UTC +00:00], ["fb_id", "532542406_10151955422392407"], ["fb_type", "video"], ["fb_uid", "560401831"], ["fb_uid_from", "532542406"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yj/r/v2OnaTyTQZE.gif"], ["link", "https://vimeo.com/75191555"], ["message", "Lindo!"], ["name", "RANGO y SUITE FLAMENCA - Compañía Antonio Gades"], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQCMgs9Dv1W2fKVp&w=130&h=130&url=http%3A%2F%2Fb.vimeocdn.com%2Fts%2F449%2F687%2F449687317_640.jpg"], ["updated_at", Tue, 25 Mar 2014 18:02:58 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:02:18 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/posts.json?e=6867&fb_type=all&t=CAAIAFwCQcjMBAPiPVyJZCRrZCMO1PPnZBSuSydoakitBYdYGDWufJp6PWyJTJN5YftLKuZA6WT3ZANw6eCts8M3NC4Yvrz4OC7F4yZAxgBLr5moGEZBHPduU0WjlvtgvqH5oZCNZCjUczDu4y3zKQKONggyvrgsNe6BAiVsDyXgfEwnxNrqQxyprqsNqDGYhHj0Sz7mxPpFlupAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:05:35 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6867", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAPiPVyJZCRrZCMO1PPnZBSuSydoakitBYdYGDWufJp6PWyJTJN5YftLKuZA6WT3ZANw6eCts8M3NC4Yvrz4OC7F4yZAxgBLr5moGEZBHPduU0WjlvtgvqH5oZCNZCjUczDu4y3zKQKONggyvrgsNe6BAiVsDyXgfEwnxNrqQxyprqsNqDGYhHj0Sz7mxPpFlupAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30[0m
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 1.7ms)
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '100002059694279_613245405420777' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "message", "name", "picture", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:05:36 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:04:51 UTC +00:00], ["fb_id", "100002059694279_613245405420777"], ["fb_type", "video"], ["fb_uid", "560401831"], ["fb_uid_from", "100002059694279"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yj/r/v2OnaTyTQZE.gif"], ["link", "https://www.youtube.com/watch?v=0lLf6qakrTw#t=185"], ["message", "https://www.youtube.com/watch?v=0lLf6qakrTw#t=185"], ["name", "He Walked Into A Segregated Library. He Wanted To Be An Astronaut. Mission Accomplished."], ["picture", "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAfqfmPH9JywtKV&w=130&h=130&url=http%3A%2F%2Fi1.ytimg.com%2Fvi%2F0lLf6qakrTw%2Fhqdefault.jpg"], ["updated_at", Tue, 25 Mar 2014 18:05:36 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:04:51 UTC +00:00]]
+  [1m[35m (1.4ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=6816&fb_type=all&t=CAAIAFwCQcjMBAKpkcsXfSPi7iQ4bJTsS4faPJW651voQo6Rz2xzQAjfXVEEZC9EulKHcbrFZAtQe0ajCAzukIiq9Xd00SvDVuijrWl6L6hsPTvDpacpoZC8YZB5p2qIxsqLb4xOojsL3smxxIOlkhppXgFroauBJ0XRulIJPA2Ma2ZBcBdM9Jh386yAEjNT5PRMLm3DZByJgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-25 11:06:25 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6816", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAKpkcsXfSPi7iQ4bJTsS4faPJW651voQo6Rz2xzQAjfXVEEZC9EulKHcbrFZAtQe0ajCAzukIiq9Xd00SvDVuijrWl6L6hsPTvDpacpoZC8YZB5p2qIxsqLb4xOojsL3smxxIOlkhppXgFroauBJ0XRulIJPA2Ma2ZBcBdM9Jh386yAEjNT5PRMLm3DZByJgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' LIMIT 30
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 2.7ms)
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1557050359_10203154721259687' LIMIT 1
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = 196[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "object_id", "picture", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Tue, 25 Mar 2014 18:06:27 UTC +00:00], ["created_time", Tue, 25 Mar 2014 18:05:59 UTC +00:00], ["fb_id", "1557050359_10203154721259687"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "1557050359"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=678442815524672&set=at.678442212191399.1073742134.100000768784165.1557050359&type=1&relevant_count=3"], ["object_id", "678442815524672"], ["picture", "https://fbcdn-photos-e-a.akamaihd.net/hphotos-ak-ash3/t1.0-0/1960095_678442815524672_59349823_s.jpg"], ["story", "Pablo Rebecchi was tagged in Pasiòn Por El Tango's photos."], ["updated_at", Tue, 25 Mar 2014 18:06:27 UTC +00:00], ["updated_time", Tue, 25 Mar 2014 18:05:59 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
