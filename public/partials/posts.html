@@ -1,4 +1,5 @@
-<div>
+<div class="filter">
+  <h2>Search Facebook feeds by keywords or by type</h2>
   Text: <input ng-model="message"><br>
   Type:
   <select ng-model="fb_type" ng-init="fb_type='all'">
@@ -17,6 +18,23 @@
 
 <div id='posts'>
   <p ng-repeat="post in posts" fb-render="posts">
-    <fb:name uid="{{post.fb_uid_from}}"></fb:name> {{post.message}}
+    <fb:name uid="{{post.fb_uid_from}}"></fb:name> ({{post.fb_type}}) 
+
+    <span ng-if="post.fb_type=='status'">
+      {{post.message}}
+      {{post.story}} <br/>
+      <a href="{{post.link}}">{{post.link}}</a><br/>
+      <img ng-src="{{post.picture}}">
+      {{post.name}}
+    </span>
+    <span ng-if="post.fb_type=='photo'">
+      <img ng-src="{{post.picture}}">
+    </span>
+    <span ng-if="post.fb_type=='link'">
+      <a href="{{post.link}}">{{post.link}}</a><br/>
+    </span>
+    <span ng-if="post.fb_type=='video'">
+      <img ng-src="{{post.link}}">
+    </span>
   </p><br/>
 </div>

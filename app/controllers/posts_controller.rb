@@ -24,7 +24,7 @@ class PostsController < ApplicationController
       }
 
       f.json {
-        render :json => posts.limit(20)
+        render :json => posts.limit(30)
       }
     end
 
