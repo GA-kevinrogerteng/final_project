@@ -21,11 +21,10 @@
     <strong><fb:name uid="{{post.fb_uid_from}}"></fb:name></strong> ({{post.fb_type}}) 
 
     <span ng-if="post.fb_type=='status'">
-      {{post.message}} <br/>
+      {{post.message}} <br/>{{post.name}}<br/>
       {{post.story}} <br/>
       <a href="{{post.link}}">{{post.link}}</a><br/>
       <img ng-src="{{post.picture}}"><br/>
-      {{post.name}}
     </span>
     <span ng-if="post.fb_type=='photo'">
       {{post.story}} <br/> {{post.message}} <br/>{{post.name}}<br/>
