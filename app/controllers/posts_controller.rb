@@ -24,7 +24,7 @@ class PostsController < ApplicationController
       }
 
       f.json {
-        render :json => posts.limit(30)
+        render :json => posts.order(updated_time: :desc).limit(2)
       }
     end
 
@@ -46,44 +46,44 @@ class PostsController < ApplicationController
 #    end
   end
 
-  def login
-  # generate a new oauth object with your app data and your callback url
-    session['oauth'] = Koala::Facebook::OAuth.new(APP_ID, APP_SECRET, SITE_URL + 'feeds/callback')
-    #Koala::Facebook::OAuth.new(oauth_callback_url).
+  # def login
+  # # generate a new oauth object with your app data and your callback url
+  #   session['oauth'] = Koala::Facebook::OAuth.new(APP_ID, APP_SECRET, SITE_URL + 'feeds/callback')
+  #   #Koala::Facebook::OAuth.new(oauth_callback_url).
 
-    # redirect to facebook to get your code
-    redirect_to session['oauth'].url_for_oauth_code()
+  #   # redirect to facebook to get your code
+  #   redirect_to session['oauth'].url_for_oauth_code()
 
-  end
+  # end
 
-  def logout
-    session['oauth'] = nil
-    session['access_token'] = nil
-    redirect_to '/feeds/index'
-  end
+  # def logout
+  #   session['oauth'] = nil
+  #   session['access_token'] = nil
+  #   redirect_to '/feeds/index'
+  # end
 
   #method to handle the redirect from facebook back to you
-  def callback
-    #get the access token from facebook with your code
-    session['access_token'] = session['oauth'].get_access_token(params[:code])
-    redirect_to '/feeds/menu'
-  end
+  # def callback
+  #   #get the access token from facebook with your code
+  #   session['access_token'] = session['oauth'].get_access_token(params[:code])
+  #   redirect_to '/feeds/menu'
+  # end
 
-  def menu
-     @ok="you are welcome"
-     if session['access_token']
-       @face='You are logged in! <a href="/feeds/logout">Logout</a>'
-       # do some stuff with facebook here
-       # for example:
-       # @graph = Koala::Facebook::GraphAPI.new(session["access_token"])
-       # publish to your wall (if you have the permissions)
-       # @graph.put_wall_post("I'm posting from my new cool app!")
-       # or publish to someone else (if you have the permissions too ;) )
-       # @graph.put_wall_post("Checkout my new cool app!", {}, "someoneelse's id")
-     else
-       @face='<a href="/feeds/login">Login</a>'
-     end
+  # def menu
+  #    @ok="you are welcome"
+  #    if session['access_token']
+  #      @face='You are logged in! <a href="/feeds/logout">Logout</a>'
+  #      # do some stuff with facebook here
+  #      # for example:
+  #      # @graph = Koala::Facebook::GraphAPI.new(session["access_token"])
+  #      # publish to your wall (if you have the permissions)
+  #      # @graph.put_wall_post("I'm posting from my new cool app!")
+  #      # or publish to someone else (if you have the permissions too ;) )
+  #      # @graph.put_wall_post("Checkout my new cool app!", {}, "someoneelse's id")
+  #    else
+  #      @face='<a href="/feeds/login">Login</a>'
+  #    end
 
-  end
+  # end
 end
 

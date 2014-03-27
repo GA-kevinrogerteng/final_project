@@ -1,7 +1,7 @@
 <div class="filter">
   <h1>Search Facebook feeds by keywords or by type</h1>
   Text: <input ng-model="message"><br>
-  Type:
+  Search by:
   <select ng-model="fb_type" ng-init="fb_type='all'">
     <option value="all">All</option>
     <option value="status">Status</option>
@@ -10,11 +10,10 @@
 <!--     <option value="video">Video</option> -->
   </select><br>
   <button ng-click="updatePosts()">
-    Update
+    <div>Update</div>
   </button>
 
 </div>
-
 
 <div id='posts'>
   <p ng-repeat="post in posts" fb-render="posts">
@@ -22,7 +21,7 @@
 
     <span ng-if="post.fb_type=='status'">
       {{post.message}} <br/>{{post.name}}<br/>
-      {{post.story}} <br/>
+      <i>{{post.story}}</i> <br/>
       <a href="{{post.link}}">{{post.link}}</a><br/>
       <img ng-src="{{post.picture}}"><br/>
     </span>
@@ -37,3 +36,8 @@
     </span>
   </p><br/>
 </div>
+
+<div>
+<a onClick="logout()" style="color: #ffffff">Logout</a>
+</div>
+
