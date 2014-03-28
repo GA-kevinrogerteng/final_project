@@ -8,8 +8,6 @@ class PostsWorker
 
 
   def perform(fb_id, access_token, expires_in, next_page_params)
-    puts 'in PostsWorker::perform'
-
     paginate = false
 
     graph = Koala::Facebook::API.new(access_token, APP_SECRET)
@@ -20,23 +18,20 @@ class PostsWorker
     else
       home_url = "me/home"
       begin
+        # get the last news item for the user
         last_post = Post.where(fb_uid: fb_id).order(updated_time: :desc).take!
+        # deterimine the last post's timestamp
         since = last_post[:updated_time].strftime(format='%s')
+        # request only the posts published since the last stored post's timestamp
         home_url = home_url + "?since=#{since}"
       rescue ActiveRecord::RecordNotFound => err
+        # no posts were found for the user, so we will retrieve all available posts
         paginate = true
       end
 
       posts_fb = graph.get_object(home_url)
     end
 
-
-    #begin
-    #  posts_fb = JSON.parse(posts_json).data
-    #rescue JSON::ParserError => err
-    #  puts "There was a Parser Error #{err}"
-    #  return
-    #end
 
     puts "retrieved #{posts_fb.length} posts"
 
@@ -74,6 +69,7 @@ class PostsWorker
       perform(fb_id, access_token, expires_in, posts_fb.next_page_params)
     end
 
+    # update the user's feed indefinitely:
     #PostsWorker.perform_in(5.minutes, fb_id, access_token, expires_in)
   end
 
