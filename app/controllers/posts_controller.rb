@@ -43,7 +43,7 @@ class PostsController < ApplicationController
           posts = posts.where("message LIKE '%#{params[:message]}%'")
         end
 
-        render :json => posts.order(updated_time: :desc).limit(3)
+        render :json => posts.order(updated_time: :desc).limit(20)
       }
     end
 
