@@ -26,8 +26,12 @@ BetterNewsApp.config(['$routeProvider',
         templateUrl: 'partials/posts.html',
         controller: 'BetterNewsController'
       }).
+      when('/posts/new', {
+        templateUrl: '/posts/new',
+        controller: 'BetterNewsController'
+      }).
       when('/posts/:postId', {
-        templateUrl: 'partials/post.html',
+        templateUrl: '/posts/post.html',
         controller: 'BetterNewsController'
       }).
       otherwise({

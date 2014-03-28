@@ -7,7 +7,7 @@
     <option value="status">Status</option>
     <option value="link">Link</option>
     <option value="photo">Photo</option>
-<!--     <option value="video">Video</option> -->
+    <option value="video">Video</option>
   </select><br>
   <button ng-click="updatePosts()">
     <div>Update</div>
@@ -17,27 +17,34 @@
 
 <div id='posts'>
   <p ng-repeat="post in posts" fb-render="posts">
-    <strong><fb:name uid="{{post.fb_uid_from}}"></fb:name></strong> ({{post.fb_type}}) 
+    <img ng-show="{{post.icon}}" ng-src="{{post.icon}}">
+    <strong><fb:name uid="{{post.fb_uid_from}}"></fb:name></strong>
 
     <span ng-if="post.fb_type=='status'">
       {{post.message}} <br/>{{post.name}}<br/>
-      <i>{{post.story}}</i> <br/>
-      <a href="{{post.link}}">{{post.link}}</a><br/>
+      <i><a href="http://facebook.com/{{post.fb_id}}">{{post.story}}</a></i> <br/>
+      <img ng-src="{{post.picture}}"><br/>
+    </span>
+    <span ng-if="post.fb_type=='link'">
+      <a href="{{post.link}}">{{post.story}}</a> <br/> {{post.name}}<br/> {{post.message}} <br/>
       <img ng-src="{{post.picture}}"><br/>
     </span>
     <span ng-if="post.fb_type=='photo'">
       {{post.story}} <br/> {{post.message}} <br/>{{post.name}}<br/>
       <a href="{{post.link}}"><img ng-src="{{post.picture}}"></a>
     </span>
-    <span ng-if="post.fb_type=='link'">
-      {{post.story}} <br/> {{post.name}}<br/> {{post.message}} <br/>
-      <img ng-src="{{post.picture}}"><br/>
-      <a href="{{post.link}}">{{post.link}}</a><br/>
+    <span ng-if="post.fb_type=='video'">
+      {{post.story}} <br/> {{post.message}} <br/>{{post.name}}<br/>
+      <a href="{{post.link}}"><img ng-src="{{post.picture}}"></a>
     </span>
+
   </p><br/>
 </div>
 
 <div>
+<!--<a href="/posts/new?fb_uid={{session.uid}}">New Post</a>-->
+<a href="#/posts/new">New Post</a>
+&nbsp | &nbsp
 <a onClick="logout()" style="color: #ffffff">Logout</a>
 </div>
 

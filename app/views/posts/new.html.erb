@@ -1,0 +1,15 @@
+<%= form_for @post do |p| %>
+    <input ng-show='false' type="text" id="post_fb_uid_from" name="post[fb_uid_from]" type="text" ng-model="session.uid"/>
+
+<!--
+    <input id="post_local_photo" name="post[local_photo]" type="file" /><br>
+
+    <input id="post_message" name="post[message]" type="text" />
+  -->
+
+    <%= p.file_field :local_photo %><br>
+
+    <%= p.text_field :message %>
+
+    <%= p.submit %>
+<% end %>
