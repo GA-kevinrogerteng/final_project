@@ -26394,3 +26394,813 @@ Processing by PostsController#index as JSON
   [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) AND "posts"."fb_type" = 'video' AND (message LIKE '%%') ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
   [1m[36mPost Load (2.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
 Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (8.1ms)
+  Rendered posts/index.html.erb within layouts/empty (10.0ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:11 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:50:13 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.8ms)
+  Rendered posts/index.html.erb within layouts/empty (5.8ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:14 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:14 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:14 -0700
+
+
+Started GET "/posts.json?e=4185&t=CAAIAFwCQcjMBAIqB6wNrt1GmFPpjk1jTs0yI02Ij1TjGxqhbyFGi1jK2njOM218MmENGhCHlrWrNK86jfy5vclcK4pHBWZBXdfo3NJgcZANn2c8a1SZAu3rCTjj2P1m7pcpmcqzfsCXPXICuGDKQP88E6xqAyR9XLYtQ06jILWT2N8LTCXI5qNVZAvx3VDRvm0EzYTuCmgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:50:15 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4185", "t"=>"CAAIAFwCQcjMBAIqB6wNrt1GmFPpjk1jTs0yI02Ij1TjGxqhbyFGi1jK2njOM218MmENGhCHlrWrNK86jfy5vclcK4pHBWZBXdfo3NJgcZANn2c8a1SZAu3rCTjj2P1m7pcpmcqzfsCXPXICuGDKQP88E6xqAyR9XLYtQ06jILWT2N8LTCXI5qNVZAvx3VDRvm0EzYTuCmgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 1.8ms)
+  [1m[35mPost Load (21.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '654814013_10152271825089014' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "message", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Fri, 28 Mar 2014 06:50:17 UTC +00:00], ["created_time", Fri, 28 Mar 2014 06:49:42 UTC +00:00], ["fb_id", "654814013_10152271825089014"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "654814013"], ["message", "Tapelerde geçen konuşmalar nekadar alçakça ise , bunların dinlenmeside bi okadar alçakça , kimse bu kadar bizim iç işlerimizde kulağı olamaz . \"ABD sözüm sana\""], ["updated_at", Fri, 28 Mar 2014 06:50:17 UTC +00:00], ["updated_time", Fri, 28 Mar 2014 06:49:42 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '1350211896_10203544461876065' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "icon", "link", "object_id", "picture", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["created_at", Fri, 28 Mar 2014 06:50:17 UTC +00:00], ["created_time", Fri, 28 Mar 2014 06:49:25 UTC +00:00], ["fb_id", "1350211896_10203544461876065"], ["fb_type", "photo"], ["fb_uid", "560401831"], ["fb_uid_from", "1350211896"], ["icon", "https://fbstatic-a.akamaihd.net/rsrc.php/v2/yz/r/StEh3RhPvjk.gif"], ["link", "https://www.facebook.com/photo.php?fbid=10203544461676060&set=a.1600534777175.2078088.1350211896&type=1&relevant_count=1"], ["object_id", "10203544461676060"], ["picture", "https://fbcdn-photos-g-a.akamaihd.net/hphotos-ak-ash3/t1.0-0/69567_10203544461676060_1638318604_s.jpg"], ["story", "Sol Orozco changed her profile picture."], ["updated_at", Fri, 28 Mar 2014 06:50:17 UTC +00:00], ["updated_time", Fri, 28 Mar 2014 06:49:25 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '684838477_10203044492740004' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Fri, 28 Mar 2014 06:50:17 UTC +00:00], ["created_time", Fri, 28 Mar 2014 06:46:07 UTC +00:00], ["fb_id", "684838477_10203044492740004"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "684838477"], ["story", "Naomi Margolis and 4 other friends like a photo."], ["updated_at", Fri, 28 Mar 2014 06:50:17 UTC +00:00], ["updated_time", Fri, 28 Mar 2014 06:46:07 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (5.3ms)
+  Rendered posts/index.html.erb within layouts/empty (6.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:50:20 -0700
+
+
+Started GET "/posts.json?e=4179&t=CAAIAFwCQcjMBAPpwCm3c45AXZARTzbZCYElGJbC8ZAWIyMcBWZBMZC1K375TtGyOV62jW8jREZCOEYLerz1uPSZAtU9syxwObCrpDRA4qbb3DWX38DZAzTZAFyPZA9Bgde5KE1ADX4QvLSItZBBzfVZCIeYUGdL8ZChRn6EcobPv92wHJbYVQxE9ZA7GHQnA8lfl9YeRcZA2z3nCZAYrUwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:50:21 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"4179", "t"=>"CAAIAFwCQcjMBAPpwCm3c45AXZARTzbZCYElGJbC8ZAWIyMcBWZBMZC1K375TtGyOV62jW8jREZCOEYLerz1uPSZAtU9syxwObCrpDRA4qbb3DWX38DZAzTZAFyPZA9Bgde5KE1ADX4QvLSItZBBzfVZCIeYUGdL8ZChRn6EcobPv92wHJbYVQxE9ZA7GHQnA8lfl9YeRcZA2z3nCZAYrUwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.8ms)
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:54:16 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (98.3ms)
+  Rendered posts/index.html.erb within layouts/empty (99.8ms)
+Completed 200 OK in 102ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:54:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:54:17 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:54:17 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:54:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:54:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:54:17 -0700
+
+
+Started GET "/posts.json?e=3942&t=CAAIAFwCQcjMBAFNPuZB1rsklrqKC2QgcxLz2BlT36UzxnYvQxhkFiueQ2sssIZCcV6VVIi4LjyXTJ72BuyT77okYt49XY9x05qugKqOt4D1iIhcm28KTMk7svMFhnCeirGZAGX6ZBpZBCwEZBBOuKPbosZAPV48BGy1f32E81WR0y9jsY4Wh8EshZBrKk27hKxgX5mt2BDC6WAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:54:18 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3942", "t"=>"CAAIAFwCQcjMBAFNPuZB1rsklrqKC2QgcxLz2BlT36UzxnYvQxhkFiueQ2sssIZCcV6VVIi4LjyXTJ72BuyT77okYt49XY9x05qugKqOt4D1iIhcm28KTMk7svMFhnCeirGZAGX6ZBpZBCwEZBBOuKPbosZAPV48BGy1f32E81WR0y9jsY4Wh8EshZBrKk27hKxgX5mt2BDC6WAZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.6ms)
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=3942&t=CAAIAFwCQcjMBAFNPuZB1rsklrqKC2QgcxLz2BlT36UzxnYvQxhkFiueQ2sssIZCcV6VVIi4LjyXTJ72BuyT77okYt49XY9x05qugKqOt4D1iIhcm28KTMk7svMFhnCeirGZAGX6ZBpZBCwEZBBOuKPbosZAPV48BGy1f32E81WR0y9jsY4Wh8EshZBrKk27hKxgX5mt2BDC6WAZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:55:21 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3942", "t"=>"CAAIAFwCQcjMBAFNPuZB1rsklrqKC2QgcxLz2BlT36UzxnYvQxhkFiueQ2sssIZCcV6VVIi4LjyXTJ72BuyT77okYt49XY9x05qugKqOt4D1iIhcm28KTMk7svMFhnCeirGZAGX6ZBpZBCwEZBBOuKPbosZAPV48BGy1f32E81WR0y9jsY4Wh8EshZBrKk27hKxgX5mt2BDC6WAZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (6.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+Completed 200 OK in 47ms (Views: 8.9ms | ActiveRecord: 6.1ms)
+  [1m[36mPost Load (6.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:57:35 -0700
+
+SyntaxError (/Users/sofyanagaslaeva/Desktop/Week9/final_project/app/controllers/posts_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:424:in `block in load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:616:in `new_constants_in'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:423:in `load_file'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:324:in `require_or_load'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:184:in `const_missing'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.2) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:535:in `get'
+  activesupport (4.0.2) lib/active_support/dependencies.rb:566:in `constantize'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.2) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.2) lib/action_dispatch/routing/route_set.rb:680:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.2) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1623146292816096370__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/sofyanagaslaeva/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/sofyanagaslaeva/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/sofyanagaslaeva/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/sofyanagaslaeva/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/sofyanagaslaeva/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/sofyanagaslaeva/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /Users/sofyanagaslaeva/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.8ms)
+  Rendered posts/index.html.erb within layouts/empty (5.7ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:09 -0700
+
+
+Started GET "/posts.json?e=3710&t=CAAIAFwCQcjMBAPitzOX759nZC7yxLXmmsQajMrNGA4GzPZBNE0QprcXncMrKKFADQVntakOG7PSELbZBgpz7YuMZCDZCFpjxTRZAXRQoyctdy5muxWAlZBfy7M3Sp8e0aKrr7mnZAOoW94tRnFmx4opA0ocVpjcXkwJgwJzsvfJbPuQwqKgBKPgxy3v4PSVisd10C0dmlZCwAqwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:10 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3710", "t"=>"CAAIAFwCQcjMBAPitzOX759nZC7yxLXmmsQajMrNGA4GzPZBNE0QprcXncMrKKFADQVntakOG7PSELbZBgpz7YuMZCDZCFpjxTRZAXRQoyctdy5muxWAlZBfy7M3Sp8e0aKrr7mnZAOoW94tRnFmx4opA0ocVpjcXkwJgwJzsvfJbPuQwqKgBKPgxy3v4PSVisd10C0dmlZCwAqwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (5.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+Completed 200 OK in 148ms (Views: 127.8ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/posts.json?e=3709&fb_type=photo&t=CAAIAFwCQcjMBANrbVnnvkwTszC49n2lt0ESj70KBnX2zSn5LBBPazVFs8WP20vhdaRyMaT2NahJAqls4VLwOVogyhIOUAaqDRth6VymNtUpKijfxBelZBQTdU9W8qZBOzfWM9NsnGhTjtoTi6ujsZAZAmTNcuwtcEpXb0LZAOOQS4mXJBzxCkb5UhRMEzyWNpUebZBOC34NQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:26 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3709", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBANrbVnnvkwTszC49n2lt0ESj70KBnX2zSn5LBBPazVFs8WP20vhdaRyMaT2NahJAqls4VLwOVogyhIOUAaqDRth6VymNtUpKijfxBelZBQTdU9W8qZBOzfWM9NsnGhTjtoTi6ujsZAZAmTNcuwtcEpXb0LZAOOQS4mXJBzxCkb5UhRMEzyWNpUebZBOC34NQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) AND "posts"."fb_type" = 'photo' ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts.json?e=3693&t=CAAIAFwCQcjMBAFHcJF1kX6MZBGaZAIVfNZBJTPAYhTjpFQOH3mQut6rfGdD1SlJiQlriyTPokIOWM7WEZCLx5nieNFKycXzSk9DNNQnUdzOjfcLi01zGZCcuGsYNzZC1ePGSVYOjGt4Y8X5B9aD4wb66EvOTR5GyT9KSAhZAFExSS4lEGhLQ4O2lIZAWAPHIP1VF28gvhO6DIwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:39 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3693", "t"=>"CAAIAFwCQcjMBAFHcJF1kX6MZBGaZAIVfNZBJTPAYhTjpFQOH3mQut6rfGdD1SlJiQlriyTPokIOWM7WEZCLx5nieNFKycXzSk9DNNQnUdzOjfcLi01zGZCcuGsYNzZC1ePGSVYOjGt4Y8X5B9aD4wb66EvOTR5GyT9KSAhZAFExSS4lEGhLQ4O2lIZAWAPHIP1VF28gvhO6DIwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.8ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:58:39 -0700
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (12.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+  Rendered posts/_index.html.erb (16.1ms)
+  Rendered posts/index.html.erb within layouts/empty (18.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts.json?e=3693&t=CAAIAFwCQcjMBAFHcJF1kX6MZBGaZAIVfNZBJTPAYhTjpFQOH3mQut6rfGdD1SlJiQlriyTPokIOWM7WEZCLx5nieNFKycXzSk9DNNQnUdzOjfcLi01zGZCcuGsYNzZC1ePGSVYOjGt4Y8X5B9aD4wb66EvOTR5GyT9KSAhZAFExSS4lEGhLQ4O2lIZAWAPHIP1VF28gvhO6DIwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:40 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3693", "t"=>"CAAIAFwCQcjMBAFHcJF1kX6MZBGaZAIVfNZBJTPAYhTjpFQOH3mQut6rfGdD1SlJiQlriyTPokIOWM7WEZCLx5nieNFKycXzSk9DNNQnUdzOjfcLi01zGZCcuGsYNzZC1ePGSVYOjGt4Y8X5B9aD4wb66EvOTR5GyT9KSAhZAFExSS4lEGhLQ4O2lIZAWAPHIP1VF28gvhO6DIwZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (2.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+Completed 200 OK in 39ms (Views: 5.1ms | ActiveRecord: 2.3ms)
+  [1m[36mPost Load (2.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=3693&t=CAAIAFwCQcjMBAFHcJF1kX6MZBGaZAIVfNZBJTPAYhTjpFQOH3mQut6rfGdD1SlJiQlriyTPokIOWM7WEZCLx5nieNFKycXzSk9DNNQnUdzOjfcLi01zGZCcuGsYNzZC1ePGSVYOjGt4Y8X5B9aD4wb66EvOTR5GyT9KSAhZAFExSS4lEGhLQ4O2lIZAWAPHIP1VF28gvhO6DIwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:41 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3693", "t"=>"CAAIAFwCQcjMBAFHcJF1kX6MZBGaZAIVfNZBJTPAYhTjpFQOH3mQut6rfGdD1SlJiQlriyTPokIOWM7WEZCLx5nieNFKycXzSk9DNNQnUdzOjfcLi01zGZCcuGsYNzZC1ePGSVYOjGt4Y8X5B9aD4wb66EvOTR5GyT9KSAhZAFExSS4lEGhLQ4O2lIZAWAPHIP1VF28gvhO6DIwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 2.4ms)
+  [1m[35mPost Load (1.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:58:53 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.5ms)
+  Rendered posts/index.html.erb within layouts/empty (4.3ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:54 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:54 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:54 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:54 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:54 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:58:54 -0700
+
+
+Started GET "/posts.json?e=3665&t=CAAIAFwCQcjMBANWmX2WYiUlQY0SuvNvdA7pZCBqH4ymarm5aKOFADlZCQzyyBhumnEyydhu2OJ00UXBKMN2fRYsvNze2Wpo6L0LRZAW84lRckuxAAxoo9Au3rMdgmPkqEZAuPcKNQowpsPZCZACdk3aoq1uD7GgfAgFXptTSiZCgnKiqvDxmvbZBZBEzoHPIn07y0jZCgebZCsQwgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:55 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3665", "t"=>"CAAIAFwCQcjMBANWmX2WYiUlQY0SuvNvdA7pZCBqH4ymarm5aKOFADlZCQzyyBhumnEyydhu2OJ00UXBKMN2fRYsvNze2Wpo6L0LRZAW84lRckuxAAxoo9Au3rMdgmPkqEZAuPcKNQowpsPZCZACdk3aoq1uD7GgfAgFXptTSiZCgnKiqvDxmvbZBZBEzoHPIn07y0jZCgebZCsQwgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (1.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/posts.json?e=3665&fb_type=status&t=CAAIAFwCQcjMBANWmX2WYiUlQY0SuvNvdA7pZCBqH4ymarm5aKOFADlZCQzyyBhumnEyydhu2OJ00UXBKMN2fRYsvNze2Wpo6L0LRZAW84lRckuxAAxoo9Au3rMdgmPkqEZAuPcKNQowpsPZCZACdk3aoq1uD7GgfAgFXptTSiZCgnKiqvDxmvbZBZBEzoHPIn07y0jZCgebZCsQwgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:58:59 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3665", "fb_type"=>"status", "t"=>"CAAIAFwCQcjMBANWmX2WYiUlQY0SuvNvdA7pZCBqH4ymarm5aKOFADlZCQzyyBhumnEyydhu2OJ00UXBKMN2fRYsvNze2Wpo6L0LRZAW84lRckuxAAxoo9Au3rMdgmPkqEZAuPcKNQowpsPZCZACdk3aoq1uD7GgfAgFXptTSiZCgnKiqvDxmvbZBZBEzoHPIn07y0jZCgebZCsQwgZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.5ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) AND "posts"."fb_type" = 'status' ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.5ms)
+  [1m[35mPost Load (2.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=3660&fb_type=status&t=CAAIAFwCQcjMBAIsmoE4u2nQ3WgSw46Ns24dFGCOJIwLRDIanvnocXxnuOwD4heucsEAmZBrW8JKpl5sdTFbraMGJD5RmzPTZCpIcikdCtoYTbsHmV4SPmU5BqWcZATjLhrHTj1pbQoK8yfR1VPoopHHZCw1c26jJteABKjzWbVYtnRhTX9PZABjCnXqZCWqNZBlCky2ejAXIgZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:59:04 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3660", "fb_type"=>"status", "t"=>"CAAIAFwCQcjMBAIsmoE4u2nQ3WgSw46Ns24dFGCOJIwLRDIanvnocXxnuOwD4heucsEAmZBrW8JKpl5sdTFbraMGJD5RmzPTZCpIcikdCtoYTbsHmV4SPmU5BqWcZATjLhrHTj1pbQoK8yfR1VPoopHHZCw1c26jJteABKjzWbVYtnRhTX9PZABjCnXqZCWqNZBlCky2ejAXIgZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) AND "posts"."fb_type" = 'status' ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts.json?e=3655&t=CAAIAFwCQcjMBANguRZAFzZCEZADSZAMFZAzOARDQpbSif5YKZABv36hliPrbSRtWakqnbDmzEtMbz3mZAZB69sSzb4AXZAbpIIGIxQyPLozTF5ZAtkPBLJLH3yq3FTjxm1ZBEuCCZB02ONerfQeIEdCL3dIiE7bkmNZAqRSrrxUOMmlN5zFhThG0sh0PgNpL5Xe2fgZAxpHSuMXF917gZDZD&uid=560401831" for 127.0.0.1 at 2014-03-27 23:59:12 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"3655", "t"=>"CAAIAFwCQcjMBANguRZAFzZCEZADSZAMFZAzOARDQpbSif5YKZABv36hliPrbSRtWakqnbDmzEtMbz3mZAZB69sSzb4AXZAbpIIGIxQyPLozTF5ZAtkPBLJLH3yq3FTjxm1ZBEuCCZB02ONerfQeIEdCL3dIiE7bkmNZAqRSrrxUOMmlN5zFhThG0sh0PgNpL5Xe2fgZAxpHSuMXF917gZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 12ms (Views: 3.7ms | ActiveRecord: 2.1ms)
+  [1m[35mPost Load (7.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.3ms)
+  Rendered posts/index.html.erb within layouts/empty (4.4ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-27 23:59:17 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (80.7ms)
+  Rendered posts/index.html.erb within layouts/empty (81.6ms)
+Completed 200 OK in 86ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:20 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:03:24 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (7.6ms)
+  Rendered posts/index.html.erb within layouts/empty (8.9ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:25 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:25 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:25 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.2ms)
+  Rendered posts/index.html.erb within layouts/empty (4.1ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:03:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.9ms)
+  Rendered posts/index.html.erb within layouts/empty (4.9ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:26 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:05:30 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.2ms)
+  Rendered posts/index.html.erb within layouts/empty (4.1ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:31 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:31 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:31 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:31 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:31 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:31 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (7.8ms)
+  Rendered posts/index.html.erb within layouts/empty (9.9ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:49 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.2ms)
+  Rendered posts/index.html.erb within layouts/empty (4.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:50 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:05:54 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (33.3ms)
+  Rendered posts/index.html.erb within layouts/empty (34.4ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:05:59 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.3ms)
+  Rendered posts/index.html.erb within layouts/empty (4.3ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:05:59 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:06:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:06:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:06:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:06:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:06:00 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:06:01 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.7ms)
+  Rendered posts/index.html.erb within layouts/empty (4.5ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:06:01 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.2ms)
+  Rendered posts/index.html.erb within layouts/empty (4.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (9.7ms)
+  Rendered posts/index.html.erb within layouts/empty (10.6ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:24 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (5.2ms)
+  Rendered posts/index.html.erb within layouts/empty (6.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:29 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.5ms)
+  Rendered posts/index.html.erb within layouts/empty (4.7ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:07:48 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (12.4ms)
+  Rendered posts/index.html.erb within layouts/empty (13.5ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:22 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (82.7ms)
+  Rendered posts/index.html.erb within layouts/empty (83.7ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:09:34 -0700
+
+
+Started GET "/posts.json?e=6618&t=CAAIAFwCQcjMBAHhG3ynMjsW9zKSvOoH9hU2b7GF7HefTGrDaL65DT9UIApOLGam78Xo9uZBmP0TdelZAXktFKPW5XV1C53M1uTMNX3ZC8TjgTbfDIPX211EPq1JXhHpZCq8cTVtLkptmI7qPF7UIS4Bdlb1eQPRSIbDtKlAVsLACc1Xv55e39OQwniQdtz6pXJ6OdSvL5QZDZD&uid=560401831" for 127.0.0.1 at 2014-03-28 00:09:42 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6618", "t"=>"CAAIAFwCQcjMBAHhG3ynMjsW9zKSvOoH9hU2b7GF7HefTGrDaL65DT9UIApOLGam78Xo9uZBmP0TdelZAXktFKPW5XV1C53M1uTMNX3ZC8TjgTbfDIPX211EPq1JXhHpZCq8cTVtLkptmI7qPF7UIS4Bdlb1eQPRSIbDtKlAVsLACc1Xv55e39OQwniQdtz6pXJ6OdSvL5QZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 1.7ms)
+  [1m[36mPost Load (1.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (3.2ms)
+  Rendered posts/index.html.erb within layouts/empty (4.1ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:10:50 -0700
+
+
+Started GET "/posts.json?e=6549&fb_type=all&t=CAAIAFwCQcjMBAGVbVc4m99BfO5U1AO3EWxWgey9xgZCCg1TBuRxrSGWeNkgZCjZBV0NFwpecA0hHBSBsZCIIHFAGbXaIC9VXCB5O4ge8it4FI4sGYzEPFZCZCt3U7HcL2VfIiFxhlyzusEsgLC52ZAtdUnTcn7Y56gS9YTdgpe1c16taVyT0VOfWXlZAjSddBsGjRk3R1HAr7QZDZD&uid=560401831" for 127.0.0.1 at 2014-03-28 00:10:55 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6549", "fb_type"=>"all", "t"=>"CAAIAFwCQcjMBAGVbVc4m99BfO5U1AO3EWxWgey9xgZCCg1TBuRxrSGWeNkgZCjZBV0NFwpecA0hHBSBsZCIIHFAGbXaIC9VXCB5O4ge8it4FI4sGYzEPFZCZCt3U7HcL2VfIiFxhlyzusEsgLC52ZAtdUnTcn7Y56gS9YTdgpe1c16taVyT0VOfWXlZAjSddBsGjRk3R1HAr7QZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (2.6ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 8ms (Views: 3.1ms | ActiveRecord: 2.6ms)
+  [1m[35mPost Load (15.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+
+
+Started GET "/posts.json?e=6544&t=CAAIAFwCQcjMBAOObLCpTFKiObuds4cg8JaLuZAX6ZCAsIv3qt6nMRKWWw5VDZClIiPEleK2JG98w0RaIjiUHvzOVMLubqxWCYDerskWfJmShBArOd6bVPWx72BKuvZAV2aUujc7fKFuKF8KMIG8yMBZCvLxwgid3Ipf8awVs8fQWmH1Nw85QL8kBVnKrkDuz9sIC4cZCrwggZDZD&uid=560401831" for 127.0.0.1 at 2014-03-28 00:11:54 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6544", "t"=>"CAAIAFwCQcjMBAOObLCpTFKiObuds4cg8JaLuZAX6ZCAsIv3qt6nMRKWWw5VDZClIiPEleK2JG98w0RaIjiUHvzOVMLubqxWCYDerskWfJmShBArOd6bVPWx72BKuvZAV2aUujc7fKFuKF8KMIG8yMBZCvLxwgid3Ipf8awVs8fQWmH1Nw85QL8kBVnKrkDuz9sIC4cZCrwggZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.5ms)
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+Processing by PostsController#index as HTML
+  Rendered posts/_index.html.erb (7.1ms)
+  Rendered posts/index.html.erb within layouts/empty (12.0ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+
+
+Started GET "/assets/feeds.js?body=1" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 00:12:01 -0700
+
+
+Started GET "/posts.json?e=6473&t=CAAIAFwCQcjMBAM6hXHYDLZBHDKOPjkO0AxrE3kVX7Ovbe0l3z2V3ycrFqtsfgg2BEJUSXNeKWoldmHoL3H4JpGNjE8EaVoEFB7xa53U45XklGb9q2ZCPBGZCFAMDDCX0RhZCctAWA6duRstZA1PNEjoZBCCkHVDSRWam5XGWuxhmLn7E7JqG0smldd1UOidyajbm1eV8KamwZDZD&uid=560401831" for 127.0.0.1 at 2014-03-28 00:12:07 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6473", "t"=>"CAAIAFwCQcjMBAM6hXHYDLZBHDKOPjkO0AxrE3kVX7Ovbe0l3z2V3ycrFqtsfgg2BEJUSXNeKWoldmHoL3H4JpGNjE8EaVoEFB7xa53U45XklGb9q2ZCPBGZCFAMDDCX0RhZCctAWA6duRstZA1PNEjoZBCCkHVDSRWam5XGWuxhmLn7E7JqG0smldd1UOidyajbm1eV8KamwZDZD", "uid"=>"560401831"}
+  [1m[35mPost Load (1.6ms)[0m  SELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) ORDER BY "posts"."updated_time" DESC LIMIT 3
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 1.6ms)
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' AND "posts"."fb_id" = '726434012_10151943679799013' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "created_time", "fb_id", "fb_type", "fb_uid", "fb_uid_from", "story", "updated_at", "updated_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", Fri, 28 Mar 2014 07:12:10 UTC +00:00], ["created_time", Fri, 28 Mar 2014 07:11:15 UTC +00:00], ["fb_id", "726434012_10151943679799013"], ["fb_type", "status"], ["fb_uid", "560401831"], ["fb_uid_from", "726434012"], ["story", "Murat Erdemsel commented on his own photo."], ["updated_at", Fri, 28 Mar 2014 07:12:10 UTC +00:00], ["updated_time", Fri, 28 Mar 2014 07:11:15 UTC +00:00]]
+  [1m[35m (1.2ms)[0m  COMMIT
+
+
+Started GET "/posts.json?e=6472&fb_type=photo&t=CAAIAFwCQcjMBAOJkCZArGx2dZBT0P6dgESDgTJlfBeJbvJzsyZALnc61dWxaZCqO5135lHY2xiJbuvwHOhfnoKuNP43ZCrTNXQBhVXiPFDF2rvZA2ZBCDoBAqhO69mZAjpJO3FxfusGig1eY1OLw5pa86vXZCjEkVBxeaEjP3z8b5EZAODinYOqaZBakKnBZB6OeJuQdcUgljc3zJQZDZD&uid=560401831" for 127.0.0.1 at 2014-03-28 00:12:14 -0700
+Processing by PostsController#index as JSON
+  Parameters: {"e"=>"6472", "fb_type"=>"photo", "t"=>"CAAIAFwCQcjMBAOJkCZArGx2dZBT0P6dgESDgTJlfBeJbvJzsyZALnc61dWxaZCqO5135lHY2xiJbuvwHOhfnoKuNP43ZCrTNXQBhVXiPFDF2rvZA2ZBCDoBAqhO69mZAjpJO3FxfusGig1eY1OLw5pa86vXZCjEkVBxeaEjP3z8b5EZAODinYOqaZBakKnBZB6OeJuQdcUgljc3zJQZDZD", "uid"=>"560401831"}
+  [1m[36mPost Load (1.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (fb_uid = '560401831' OR fb_uid IS NULL) AND "posts"."fb_type" = 'photo' ORDER BY "posts"."updated_time" DESC LIMIT 3[0m
+  [1m[36mPost Load (1.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."fb_uid" = '560401831' ORDER BY "posts"."updated_time" DESC LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.8ms)

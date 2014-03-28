@@ -30,10 +30,6 @@ BetterNewsApp.config(['$routeProvider',
         templateUrl: '/posts/new',
         controller: 'BetterNewsController'
       }).
-      when('/posts/:postId', {
-        templateUrl: '/posts/post.html',
-        controller: 'BetterNewsController'
-      }).
       otherwise({
         redirectTo: '/login'
       });
